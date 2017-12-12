@@ -64,9 +64,10 @@
 
 \title{Bunch length measurements using CTR at the AWA with comparison to simulation}
 
-\author{N. Neveu\thanks{nneveu@anl.gov}\textsuperscript{1}, L. Spentzouris, Illinois Institute of Technology, Chicago, USA \\
-		A. Halavanau, Northern Illinois University, City, USA \\
-	        J. G. Power, \textsuperscript{1}also at Argonne National Laboratory
+\author{N. Neveu\thanks{nneveu@anl.gov}\textsuperscript{1}, 
+	    L. Spentzouris, Illinois Institute of Technology, Chicago, USA \\
+		A. Halavanau, Northern Illinois University, DeKalb, USA \\
+	    J. G. Power, \textsuperscript{1}Argonne National Laboratory}
 \maketitle
 
 %
@@ -84,20 +85,49 @@ The experimental results are compared with Impact-T and OPAL-T numerical simulat
 \end{abstract}
 
 
-\section{SUBMISSION OF PAPERS
-Each author should submit the PDF file and all source
-files (text and figures) to enable the paper to be
-reconstructed if there are processing difficulties.
+\section{AWA Facility}
+The AWA accelerator has a large dynamic charge density range, 
+with electron beam charge varying between 0.1 nC - 100 nC, 
+and laser spot size diameter at the cathode between 0.1 mm - 18 mm. 
 
-\section{Manuscripts}
-Templates are provided for recommended software and
-authors are advised to use them. Please consult the
-individual conference help pages if questions arise.
+Include picture of linac 
 
-\subsection{General Layout}
+\section{Simulations}
+Describe OPAL/IMPACT? Show some plots of bunch length vs. Z?
 
-These instructions are a typical implementation of the
-requirements. Manuscripts should have:
+\section{Measurement Technique}
+Describe what CTR is here
+
+\section{Experimental Setup}
+Describe experimental setup used to take data
+
+\section{Data Analysis}
+Give link to code used to find bunch length
+
+\section{Results}
+Compare simulations to experimental measurements
+\begin{figure}[!htb]
+	%   \vspace*{-.5\baselineskip}
+	\centering
+	%\includegraphics*[width=174pt]{JACpic_mc}
+	\caption{Layout of papers.}
+	\label{l2ea4-f1}
+	%   \vspace*{-\baselineskip}
+\end{figure}
+
+\section{Conclusion}
+Any conclusions should be in a separate section directly preceding
+the \SEC{Acknowledgment}, \SEC{Appendix}, or \SEC{References} sections, in that
+order.
+
+\section{Acknowledgment}
+
+\section{References}
+
+
+
+
+
 \begin{Itemize}
     \item  Either A4 (\SI{21.0}{cm}~$\times$~\SI{29.7}{cm}; \SI{8.27}{in}~$\times$~\SI{11.69}{in}) or US
            letter size (\SI{21.6}{cm}~$\times$~\SI{27.9}{cm}; \SI{8.5}{in}~$\times$~\SI{11.0}{in}) paper.
@@ -124,52 +154,10 @@ requirements. Manuscripts should have:
 %   \vspace*{-\baselineskip}
 \end{table}
 
-\subsection{Fonts}
-
-In order to produce good Adobe Acrobat PDF files, authors
-using the LaTeX template are asked to use only the fonts
-defined in the class file in standard, bold (i.\,e. \verb|\textbf|)
-or italic (i.\,e., \verb|\textit|) form and
-symbols from the standard set of fonts. In Word use only
-Symbol and, depending on your platform, Times or Times New Roman
-fonts in standard, bold or italic form.
-
-The layout of the text on the page is illustrated in
-Fig.~\ref{l2ea4-f1}. Note that the paper’s title and the author list should
-be the width of the full page. Tables and figures may span
-the whole \SI{170}{mm} page width, if desired (see Fig.~\ref{l2ea4-f2}), but
-if they span both columns, they should be placed at either
-the top or bottom of a page to ensure proper flow of the
-text (Word templates only: the text should flow from top
-to bottom in each column).
-
-\begin{figure}[!htb]
-%   \vspace*{-.5\baselineskip}
-   \centering
-   \includegraphics*[width=174pt]{JACpic_mc}
-   \caption{Layout of papers.}
-   \label{l2ea4-f1}
-%   \vspace*{-\baselineskip}
-\end{figure}
-
-\begin{figure*}[!tbh]
-    \centering
-    \includegraphics*[width=\textwidth]{JACpic2v5}
-
-    \caption{Example of a full-width figure showing the JACoW Team at their annual
-    	     meeting in 2015. This figure has a multi-line caption that has to be
-    	     justified rather than centered.}
-    \label{l2ea4-f2}
-%    \vspace*{-\baselineskip}
-\end{figure*}
-
 \subsection{Title and Author List}
 
-The title should use \SI{14}{pt} bold uppercase letters and be centered on the page.
-Individual letters may be lowercase to avoid misinterpretation (e.\,g., mW, MW, SPRing-8, SwissFEL).
 To include a funding support statement, put an asterisk after the title and
-the support text at the bottom of the first column on page~1---in Word,
-use a text box; in \LaTeX, use $\backslash$\texttt{thanks}. See also the
+the support text at the bottom of the first column on page~1 in \LaTeX, use $\backslash$\texttt{thanks}. See also the
 subsection on footnotes.
 
 The names of authors, their organizations/affiliations and
@@ -182,38 +170,20 @@ may be indicated with a superscript, as shown in the
 author listing of this paper. See \SEC{Annex~A} for further examples.
 
 \subsection{Section Headings}
-
-Section headings should not be numbered. They should
-use  \SI{12}{pt}  bold  uppercase  letters  and  be  centered  in  the
-column. All section headings should appear directly above
-the text---there should never be a column break between a heading and the
+there should never be a column break between a heading and the
 following paragraph.
 
 \subsection{Subsection Headings}
-
 Subsection  headings  should  not  be  numbered.
-They should use \SI{12}{pt} italic letters and be left aligned in the column.
-Subsection headings use Title Case (or Initial Caps)
-and should appear directly above the text---there should never be a column break
+there should never be a column break
 between a heading and the following paragraph.
 
-\subsubsection{Third-level Headings} These should use \SI{10}{pt} bold
-letters and be run into the paragraph text. In \LaTeX{} they are
-created with \LaTeX's \verb|\subsubsection| command.
-In the Word templates authors must bold the heading text themselves.
-This heading should be used sparingly. See Table~\ref{style-tab}
-for its style details.
-
 \subsection{Paragraph Text}
-
-Paragraphs should use \SI{10}{pt} font and be justified (touch each side) in
-the column. The beginning of each paragraph should be indented
-approximately \SI{0.33}{cm} (\SI{0.13}{in}). The last line of a paragraph should not be
+The last line of a paragraph should not be
 printed by itself at the beginning of a column nor should the first line of
 a paragraph be printed by itself at the end of a column.
 
 \subsection{Figures, Tables and Equations}
-
 Place figures and tables as close to their place of mention as
 possible. Lettering in figures and tables should be large enough to
 reproduce clearly. Use of non-approved fonts in figures can lead to
@@ -222,10 +192,6 @@ non-bitmapped versions of Computer Modern fonts in equations (Type\,1 PostScript
 or OpenType fonts are required, Their use is described in the JACoW help
 pages~\cite{jacow-help}).
 
-Each figure and table must be numbered in ascending
-order (1, 2, 3, etc.) throughout the paper. After inserting a
-figure in a Word document, click on the figure, right click
-on “Wrap Text”, and select the “In Line with Text” option.
 Figure captions are placed below figures, and table
 captions are placed above tables.
 
@@ -265,7 +231,7 @@ in parentheses [e.g., Eq. (1)].
 \subsection{Units}
 	
 Units should be written using the standard, roman font,
-not the italic font, as shown in Eq.~(\ref{eq:units}).
+not the italic font
 An unbreakable space should precede a unit (in \LaTeX\ use a “\verb|\,|”,
 the template uses the ‘siunits’ package to format units).
 Some examples are: \SI{3}{keV},
@@ -322,92 +288,7 @@ and appear at the bottom of the same column in which
 it is used.
 
 \subsection{Acronyms}
-
 Acronyms should be defined the first time they appear.
-
-\section{styles}
-
-Table~\ref{style-tab} summarizes the fonts and spacings used in the styles of
-a JACoW template. In \LaTeX, these are implemented in the ‘jacow’ class file).
-
-\section{page numbers}
-
-\textbf{DO NOT include any page numbers}. They will be added
-when the final proceedings are produced.
-
-\begin{table}[h!t]
-	\setlength\tabcolsep{3.5pt}
-	\centering
-	\caption{Summary of Styles}
-	\label{style-tab}
-	%    \begin{tabular}{p{60pt}p{90pt}cc}
-	\begin{tabular}{llcc}
-		\toprule
-		\textbf{Style} & \textbf{Font}               & \textbf{Space}  & \textbf{Space} \\
-		&                             & \textbf{Before} & \textbf{After} \\
-		\midrule
-		\textbf{PAPER}  & \SI{14}{pt}                 & \SI{0}{pt}      & \SI{3}{pt}  \\
-		\textbf{TITLE}  & \textbf{UPPERCASE}          &                 &      \\
-		& \textbf{EXCEPT FOR}         &                 &      \\
-		& \textbf{REQUIRED lowercase} &                 &      \\
-		& \textbf{letters}            &                 &      \\
-		& \textbf{Bold}               &                 &      \\[5pt]
-		%\midrule
-		Author list  & \SI{12}{pt}                 & \SI{9}{pt}      & \SI{12}{pt} \\
-		& UPPER- and lowercase        &                 &      \\[5pt]
-		%\midrule
-		\textit{Abstract} & \SI{12}{pt}                 & \SI{0}{pt}      & \SI{3}{pt} \\
-		\textit{Title}  & \textit{Initial Caps}       &                 &      \\
-		& \textit{Italic}             &                 &      \\[5pt]
-		%\midrule
-		\textbf{Section}  & \SI{12}{pt}                 & \SI{9}{pt}      & \SI{3}{pt}  \\
-		\textbf{Heading}  & \textbf{UPPERCASE}          &                 &      \\
-		& \textbf{bold}               &                 &      \\[5pt]
-		%\midrule
-		\textit{Subsection} & \SI{12}{pt}                 & \SI{6}{pt}      & \SI{3}{pt}  \\
-		\textit{Heading}  & \textit{Initial Caps}       &                 &      \\
-		& \textit{Italic}             &                 &      \\[5pt]
-		%\midrule
-		\textbf{Third-level} & \SI{10}{pt}                 & \SI{6}{pt}      & \SI{0}{pt}  \\
-		\textbf{Heading}     & \textbf{Initial Caps}       &                 &      \\
-		& \textbf{Bold}               &                 &      \\[5pt]
-		%\midrule
-		Figure        & \SI{10}{pt}                 & \SI{3}{pt}      & $\ge$\SI{3}{pt}  \\
-		Captions      &                             &                 &      \\[5pt]
-		%\midrule
-		Table         & \SI{10}{pt}                 & $\ge$\SI{3}{pt} & \SI{3}{pt}  \\
-		Captions      &                             &                 &      \\[5pt]
-		%\midrule
-		Equations     & \SI{10}{pt} base font       & \SI{12}{pt}     & \SI{12}{pt} \\[5pt]
-		%\midrule
-		References\footnotemark    
-		& \SI{9}{pt}, justified with  & \SI{0}{pt}      & \SI{0}{pt} \\
-		& \SI{0.52}{cm} (\SI{0.2}{in}) hanging       &                 &  \\
-		& indent                      &                 &        \\
-		\bottomrule   %\SI{0.25}{in}
-	\end{tabular}
-\end{table}
-\footnotetext{In the case of more than 9 references, to ensure their proper alignment,
-	Refs. 1 to 9 only should also have a \SI{0.16}{cm} (\SI{0.06}{in}) left indent, while Refs. 10
-	onwards should have their hanging indent increased to \SI{0.68}{cm} (\SI{0.26}{in}). Further
-	information is given in \SEC{Annex~B}.}
-
-\section{templates}
-
-Template documents for the recommended word processing
-software are available from the JACoW website~\cite{jacow-help}
-and exist for \LaTeX, Microsoft Word (Mac and PC)
-and LibreOffice/Apache OpenOffice for US letter and A4
-paper sizes.
-
-Use the correct template for your paper size and version
-of Word. Do not transport Microsoft Word documents across
-platforms (e.\,g., Mac\,$\leftrightarrow$\,PC). To ensure
-that fonts are embedded in Word 2010 documents (PC), the
-“Embed fonts in file” option must be selected from within the
-Word Options$\rightarrow$Save window. Fonts are embedded by
-default when printing to PDF on MAC OSX.
-
 
 \section{checklist for electronic publication}
 
@@ -429,11 +310,6 @@ default when printing to PDF on MAC OSX.
 \raggedend
 \newpage
 
-\section{Conclusion}
-
-Any conclusions should be in a separate section directly preceding
-the \SEC{Acknowledgment}, \SEC{Appendix}, or \SEC{References} sections, in that
-order.
 
 \section{acknowledgment}
 Any acknowledgment should be in a separate section directly preceding
@@ -474,20 +350,11 @@ this should be the last section of the paper.
 
 \fi
 
-\newpage
-
-\twocolumn[\vspace*{-1.8ex}\section{ANNEX A:\endgraf FORMATTING OF AUTHORS AND AFFILIATIONS}]
-
-The names of authors, their organizations/affiliations
-and postal addresses should be grouped by affiliation and
-listed in \SI{12}{pt} upper- and lowercase letters. The name of
-the submitting or primary author should be first, followed
-by the co-authors, alphabetically by affiliation. If the
+followed by the co-authors, alphabetically by affiliation. If the
 author list for a given affiliation spans multiple lines,
 please be sure to break the line in a manner that does not
-split the author’s initials from the author’s last name. This
-is easily done by placing unbreakable spaces between the
-initials and last name. The affiliation name and address
+split the author’s initials from the author’s last name. 
+ The affiliation name and address
 are also best kept together on the same (but not necessarily
 separate) line, wherever possible. (See, for example,
 the entry for GSI in the following). In cases where authors
@@ -495,8 +362,6 @@ have multiple affiliations, the secondary affiliation is
 inserted below the author/primary affiliation listing and is
 indicated with a superscript, as shown in the following. A
 spacing of \SI{3}{pt} is added to before the secondary affiliation.
-
-\newpage
 
 Footnotes on the title and author lines may be used for
 acknowledgments and e-mail addresses, using a nonnumeric
@@ -517,17 +382,6 @@ there may be page number limitations, a format consisting
 of the principle author’s name and institute, followed by
 “on behalf of the … collaboration”, is preferred.
 
-
-\clearpage
-%
-% Include the title/author page of the JACoW Coolaboration
-%
-\includepdf[pages=-, noautoscale, pagecommand={}]{jacow-collaboration-2016.pdf}{}
-
-\clearpage
-
-\twocolumn[\vspace*{-1.8ex}\section{ANNEX B:\endgraf IEEE REFERENCE STYLE GUIDE AS APPLIED TO \NoCaseChange{JACoW} 
-	PAPERS, PERIODICALS AND OTHER WORKS}]
 
 
 \subsection{Referencing JACoW Proceedings}
@@ -569,15 +423,6 @@ To this end, the minimal form is also listed for convenience.
 Although this form is not advocated, it nevertheless
 remains acceptable.
 
-Authors are also reminded to make a distinction between
-papers published in JACoW proceedings (which
-will always have page numbers) and those papers that
-may have been presented at past JACoW conferences but
-were not published [4]. References to contributions presented
-at the same conference should be written as shown
-in Ref. [5]; the wording “this conference” may be optionally
-appended.
-
 \subsection{Referencing Periodicals and Other Sources}
 
 The IEEE style is also shown for periodicals [6-11],
@@ -590,46 +435,12 @@ under ‘Formatting Citations’ which is reached through the
 
 \subsection{Alignment of References}
 
-Entries to the References section follow a hanging indent
-structure. In this way, reference numbers in the first
-line of each reference entry are right aligned, while subsequent
-lines within a given reference are indented by a
-specified amount. The indentation values for Word are
-shown in Table~1 of this Annex and depend on whether
-the number of references exceeds single digit values.
-
 In the \LaTeX\ template, \verb|\bibliography{9}| is used for
 when the total number of references is less than ten. This
 should be changed to \verb|\bibliography{99}| if the number of
 references is ten or more.
 
-\begin{table}[h!t]
-	\centering
-	%\setlength\tabcolsep{3.5pt}
-	\caption{Formatting of References}
-	\label{format-refs}
-	%    \begin{tabular}{p{60pt}p{90pt}cc}
-	\begin{tabular}{lllcc}
-		\toprule
-		\textbf{Font} & \textbf{Left}   & \textbf{Hanging}  & \textbf{Space}   & \textbf{Space} \\
-		& \textbf{Indent} & \textbf{Indent}   & \textbf{Before}  & \textbf{After} \\
-		\midrule
-		\multicolumn{5}{c}{\textbf{No. References $\le$9}}  \\
-		\SI{9}{pt},   & \SI{0.00}{cm}   & \SI{0.52}{cm}     & \multirow{2}{*}{\SI{0}{pt}} 
-		& \multirow{2}{*}{\SI{3}{pt}}  \\
-		justified     & \SI{0.00}{in}   & \SI{0.20}{in}     &                  &             \\
-		\midrule
-		\multicolumn{5}{c}{\textbf{No. References $\ge$10}}  \\[1mm]
-		\multicolumn{5}{l}{\textbf{Refs. 1 to 9}}           \\[1mm]
-		\SI{9}{pt},   & \SI{0.16}{cm}   & \SI{0.52}{cm}     &  \multirow{2}{*}{\SI{0}{pt}} 
-		& \multirow{2}{*}{\SI{3}{pt}}  \\
-		justified     & \SI{0.06}{in}   & \SI{0.20}{in}     &                  &             \\[3mm]		\multicolumn{5}{l}{\textbf{Refs. 10 onwards}}    \\[1mm]
-		\SI{9}{pt},   & \SI{0.00}{cm}   & \SI{0.68}{cm}     &  \multirow{2}{*}{\SI{0}{pt}} 
-		& \multirow{2}{*}{\SI{3}{pt}}  \\
-		justified     & \SI{0.00}{in}   & \SI{0.26}{in}     &                  &             \\
-		\bottomrule  
-	\end{tabular}
-\end{table}
+
 
 \patchcmd\thebibliography{\section*{REFERENCES\@mkboth {REFERENCES}{REFERENCES}}}{}{}{}
 \section{PAPER PUBLISHED IN A CONFERENCE PROCEEDINGS}
@@ -931,55 +742,6 @@ references is ten or more.
 \end{thebibliography}
 \null  % this is a hack for correcting the wrong un-indent by package 'flushend' in versions before 2015
 
-\newpage
-
-\twocolumn[\vspace*{-1.8ex}\section{ANNEX C:\endgraf THE DILIGENT AUTHOR’S CHECKLIST}]
-
-\subsection{Common Oversights}
-
-In order to lessen the load on a small team of editors
-and to help expedite publication of the Proceedings, authors
-are kindly asked to give themselves an extra few
-minutes to go over the following points, which highlight
-the most common errors, before uploading their paper. By
-providing a properly formatted JACoW paper, the Proceedings
-Office is able to benefit from an autodistill process
-which automatically converts the author's PDF file
-into a version that adheres to the JACoW-compliant PDF
-standard. The process further ensures that all fonts required
-to view the entire document are embedded, rendering
-a final PDF that qualifies technically for publication.
-
-
-\subsection{Author and Affiliation Listing}
-
-The names of authors and their affiliations should be in
-\SI{12}{pt} uppercase and lowercase letters, with standard,
-roman fonts (i.\,e., not italics). When there is more than
-one author, the submitting author should be first, followed
-by the co-author. Co-authors should be grouped by affiliation
-and then be listed alphabetically. Please refer to \SEC{Annex~A}
-for further details and examples, particularly for
-the case where authors have multiple institutes.
-
-\subsection{Title, Abstract, and Author Listing in the SPMS}
-
-Authors are prompted to verify that the title, the abstract
-and the author/institute listing, previously submitted
-to the SPMS, has been updated to match that now appearing
-in the final manuscript. In particular, primary authors
-are reminded that it is their responsibility to check the
-accuracy of the co-authors entered in the SPMS database.
-These should be an exact match to that appearing in the
-paper. This is required to ensure the proper indexing of
-authors to papers in the published proceedings.
-
-\subsection{Subsection Headings}
-
-Subsection Headings use \SI{12}{pt} italic lowercase and uppercase.
-The initial letter of every principle word is capitalized,
-and the heading is left aligned in the column.
-
 \subsection{Figure Captions}
 
 Figure captions should be placed below the figure and
@@ -1000,11 +762,6 @@ Note the colon “:” after the figure number and the period
 When referring to a figure from within the text, the
 convention is to use the abbreviated form, i.\,e., Fig.~1,
 unless the reference to the figure is at the start of the sentence:
-\begin{quote}
-	Figure 1 shows a schematic view of...
-	
-	... as shown in Fig.~1.
-\end{quote}
 
 \subsection{Table Headings}
 
@@ -1032,7 +789,7 @@ is NOT to abbreviate, i.\,e., Table 1.
 If a displayed equation requires a number, it should be
 placed flush with the right margin of the column. Please
 leave sufficient space immediately before and after the
-equation, i.\,e., in Microsoft Word, \SI{12}{pt} before and after.
+equation,
 
 \subsection{Units}
 
@@ -1041,15 +798,6 @@ a “\verb|\,|” or the ‘siunits’ package to format units.
 Examples are:
 \SI{3}{keV}, \SI{4}{GeV}, \SI{100}{kW}, \SI{7}{µm}.
 
-\subsection{References}
-
-References are written in \SI{9}{pt} size and should be neatly
-presented in a consistent format with reference numbers
-aligned. Please refer to \SEC{Annex~B} for the preferred format
-and proper alignment.
-
-Please also ensure that references in the text are cited in
-sequential order.
 
 
 \end{document}
