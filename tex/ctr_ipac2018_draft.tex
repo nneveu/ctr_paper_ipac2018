@@ -94,6 +94,25 @@ Include picture of linac
 
 \section{Simulations}
 Describe OPAL/IMPACT? Show some plots of bunch length vs. Z?
+\begin{table}[hbt]
+	%   \vspace*{-.5\baselineskip}
+	\centering
+	\caption{Simulation Parameters}
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Parameter} & \textbf{Low Charge}  & \textbf{High Charge} \\
+		\midrule
+		Charge       & \SI{1}{nC}        & \SI{40}{nC}    \\ %[3pt]
+		Gun Gradient & \SI{65}{MV/m}     & \SI{65}{MV/m}  \\ %[3pt]
+		Phases       & On crest          & On crest       \\
+		Laser FWHM   & \SI{1.5}{ps}      & \SI{1.5}{ps}   \\ %[3pt]
+		Laser Radius & \SI{2}{mm}        & \SI{9}{mm}     \\
+		\bottomrule
+	\end{tabular}
+	\label{simparam}
+	%   \vspace*{-\baselineskip}
+\end{table}
+
 
 \section{Measurement Technique}
 Describe what CTR is here
@@ -120,39 +139,29 @@ Any conclusions should be in a separate section directly preceding
 the \SEC{Acknowledgment}, \SEC{Appendix}, or \SEC{References} sections, in that
 order.
 
-\section{Acknowledgment}
+\section{acknowledgment}
+We gratefully acknowledge the computing resources
+provided on Bebop, a high-performance computing cluster
+operated by the LCRC at Argonne National Laboratory.
+This material is based upon work supported by the 
+U.S. Department of Energy, Office of Science, under 
+contract number DE-AC02-06CH11357 and grant number DE-SC0015479. 
+%Travel to IPAC'18 supported by %the Division of Physics 
+%of the United States National Science Foundation 
+%Accelerator Science Program and the Division of 
+%Beam Physics of the American Physical Society.
 
 \section{References}
+\iffalse  % only for "biblatex"
+\newpage
+\printbibliography
+
+% "biblatex" is not used, go the "manual" way
+\else
 
 
 
 
-
-\begin{Itemize}
-    \item  Either A4 (\SI{21.0}{cm}~$\times$~\SI{29.7}{cm}; \SI{8.27}{in}~$\times$~\SI{11.69}{in}) or US
-           letter size (\SI{21.6}{cm}~$\times$~\SI{27.9}{cm}; \SI{8.5}{in}~$\times$~\SI{11.0}{in}) paper.
-    \item  Single-spaced text in two columns of \SI{82.5}{mm} (\SI{3.25}{in}) with \SI{5.3}{mm}
-           (\SI{0.2}{in}) separation. More recent versions of MSWord have a default spacing of 1.5 lines;
-           authors must change this to 1 line.
-    \item  The text located within the margins specified in Table~\ref{l2ea4-t1}.
-\end{Itemize}
-\begin{table}[hbt]
-%   \vspace*{-.5\baselineskip}
-   \centering
-   \caption{Margin Specifications}
-   \begin{tabular}{lcc}
-       \toprule
-       \textbf{Margin} & \textbf{A4 Paper}                      & \textbf{US Letter Paper} \\
-       \midrule
-           Top         & \SI{37}{mm} (\SI{1.46}{in})            & \SI{0.75}{in} (\SI{19}{mm})        \\ %[3pt]
-          Bottom       & \SI{19}{mm} (\SI{0.75}{in})            & \SI{0.75}{in} (\SI{19}{mm})        \\ %[3pt]
-           Left        & \SI{20}{mm} (\SI{0.79}{in})            & \SI{0.79}{in} (\SI{20}{mm})        \\ %[3pt]
-           Right       & \SI{20}{mm} (\SI{0.79}{in})            & \SI{1.02}{in} (\SI{26}{mm})        \\
-       \bottomrule
-   \end{tabular}
-   \label{l2ea4-t1}
-%   \vspace*{-\baselineskip}
-\end{table}
 
 \subsection{Title and Author List}
 
@@ -311,22 +320,8 @@ Acronyms should be defined the first time they appear.
 \newpage
 
 
-\section{acknowledgment}
-Any acknowledgment should be in a separate section directly preceding
-the \SEC{References} or \SEC{Appendix} section.
 
 
-\section{appendix}
-Any appendix should be in a separate section directly preceding
-the \SEC{References} section. If there is no \SEC{References} section,
-this should be the last section of the paper.
-
-\iffalse  % only for "biblatex"
-	\newpage
-	\printbibliography
-
-% "biblatex" is not used, go the "manual" way
-\else
 
 %\begin{thebibliography}{99}   % Use for  10-99  references
 \begin{thebibliography}{9} % Use for 1-9 references
