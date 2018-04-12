@@ -1,0 +1,282 @@
+\documentclass[landscape,final,a0paper,fontscale=0.277]{baposter}
+
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{bm}
+\usepackage{url}
+
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{vwcol} 
+\usepackage{varwidth}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usetikzlibrary{calc}
+%\usepackage{times}
+%\usepackage{helvet}
+%\usepackage{bookman}
+\usepackage{palatino}
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+
+\newcommand{\captionfont}{\footnotesize}
+
+\graphicspath{{images/}{../images/}}
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{shapes,arrows,decorations.markings,shadows,positioning}
+\usetikzlibrary{snakes,backgrounds,spy}
+\usepackage{tcolorbox}
+\newcommand{\SET}[1]  {\ensuremath{\mathcal{#1}}}
+\newcommand{\MAT}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand{\VEC}[1]  {\ensuremath{\boldsymbol{#1}}}
+\newcommand{\Video}{\SET{V}}
+\newcommand{\video}{\VEC{f}}
+\newcommand{\track}{x}
+\newcommand{\Track}{\SET T}
+\newcommand{\LMs}{\SET L}
+\newcommand{\lm}{l}
+\newcommand{\PosE}{\SET P}
+\newcommand{\posE}{\VEC p}
+\newcommand{\negE}{\VEC n}
+\newcommand{\NegE}{\SET N}
+\newcommand{\Occluded}{\SET O}
+\newcommand{\occluded}{o}
+\renewcommand{\baselinestretch}{-1.5} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Some math symbols used in the text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Multicol Settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\columnsep}{1.5em}
+\setlength{\columnseprule}{0mm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Save space in lists. Use this after the opening of the list
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\compresslist}{%
+	\setlength{\itemsep}{1pt}%
+	\setlength{\parskip}{0pt}%
+	\setlength{\parsep}{0pt}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Begin of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Here starts the poster
+%%%---------------------------------------------------------------------------
+%%% Format it to your taste with the options
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{lightblue}{rgb}{0.145,0.6666,1}
+
+\definecolor{silver}{cmyk}{0,0,0,0.3}
+\definecolor{black}{cmyk}{0,0,0.0,1.0}
+\definecolor{darkYellow}{cmyk}{0,0,1.0,0.5}
+\definecolor{darkSilver}{cmyk}{0,0,0,0.1}
+
+\definecolor{KTHBlue}{cmyk}{.71,.37,0.07,0}
+\definecolor{KTHsilver}{cmyk}{0,0,0,0.35}
+\definecolor{KTHbeige}{cmyk}{0,0.03,0.19,0.04}
+
+% Argonne Logo Colors
+\definecolor{ArgoneLogoBlue}{RGB}{4,146,210}
+\definecolor{ArgoneLogoRed}{RGB}{228,32,41}
+\definecolor{ArgoneLogoGreen}{RGB}{120,202,42}
+\definecolor{PMSCoolGray}{RGB}{112,109,110}
+
+%\definecolor{KTHBlue}{RGB}{25,84,166}
+\begin{poster}{
+  % Poster Options
+	% Show grid to help with alignment
+	grid=false,
+	columns=6,
+	% Column spacing
+	colspacing=1em,
+	% Color style
+	bgColorOne=white,
+	bgColorTwo=white,
+	borderColor=KTHBlue,
+	headerColorOne=black,
+	headerColorTwo=KTHBlue,
+	headerFontColor=white,
+	boxColorOne=white,
+	boxColorTwo=KTHBlue,
+	% Format of textbox
+	textborder=roundedleft,
+	% Format of text header
+	eyecatcher=true,
+	headerborder=closed,
+	headerheight=0.14\textheight,
+	%  textfont=\sc, An example of changing the text font
+	headershape=roundedright,
+	headershade=shadelr,
+	headerfont=\Large\bf\textsc, %Sans Serif
+	textfont={\setlength{\parindent}{0em}},
+	boxshade=plain,
+	%  background=shade-tb,
+	background=plain,
+	linewidth=2pt
+}
+% Eye Catcher
+{
+	
+	\makebox[12em][l]{
+		%\includegraphics[height=21.5em]{combo2-logo}
+} }
+%{\includegraphics[height=2em]{psi_logo_blue}\\%
+%\includegraphics[height=3em]{argonne_logo}} 
+% Title
+{\bf\textsc{CTR }}%\vspace{0.1em}}
+% Authors
+{%\vspace{0.3em}
+	N. Neveu$^{1,2}$, A. Halavanau$^3$ \\
+	IIT and ANL \\
+    }
+% University logo
+{% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
+		\makebox[12em][r]{%
+			\hfill
+%				\includegraphics[height=11em]{iit-logo}
+}
+
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{AWA Facility}{name=problem,column=0,row=0, span=2}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Argonne Wakefield Accelerator (AWA) facility
+houses two rf photoinjectors operating at \SI{1.3}{GHz}. 
+The \SI{70}{MeV} beam line consists of an rf gun with a 
+$\text{Cs}_2\text{Te}$ cathode, followed by six normal conducting linac cavities, 
+and four quadrupoles. Follwing the quads, a kicker and septum will be installed
+in the near future.
+\vspace{0.5em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{hold}{name=sims,column=2,row=0,span=2}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+hold
+\vspace{0.5em}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Neural Networks}{name=nn,column=0,below=problem, span=3}{%, bottomaligned=conclusion}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+		{\bf hold} hold \\
+		%\includegraphics[width=0.7\textwidth]{NN_range1.png}\includegraphics[width=.3\textwidth]{NN_train.png}\\
+
+\begin{minipage}{0.47\textwidth}
+	 	%\includegraphics[width=.98\textwidth]{Network.png}\\
+		{\bf Procedure Used Here:}
+
+		\centering
+\end{minipage}
+\begin{minipage}{0.53\textwidth}
+	\centering
+	\vspace{0.2em}
+	%\vspace{0.8em}	
+	%\includegraphics[width=.49\textwidth]{NN_x_k_t_s_1.png}% 	
+	%\includegraphics[width=.49\textwidth]{NN_x_s_t_s_1.png} \\
+	%\includegraphics[width=.49\textwidth]{NN_ex_k_t_s_1.png}%  	
+	%\includegraphics[width=.49\textwidth]{NN_ex_s_t_s_1.png} \\
+	%\vspace{0.6em}
+	
+\end{minipage}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Acknowledgements}{name=doe,column=3,above=bottom, span=3}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{minipage}{0.5\textwidth}
+	We gratefully acknowledge the computing resources
+	provided on Bebop, an HPC cluster operated by the LCRC at ANL.
+	This work is partially supported by the U.S. DOE, Office of Science, under contract number DE-AC02-06CH11357 and grant number DE-SC0015479.\\
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{AWA Model Parameters $\vec{\lambda}$}{name=multiple,column=4,row=0,span=2}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centering
+\vspace{-0.5em}
+\begin{minipage}{0.99\textwidth}
+	\centering
+	\begin{tabular}{ lcc}
+		Solenoid Strength & $ 200 \le \text{I}_{\text{bs}}\text{(A)} \le 500$  \Tstrut \\
+		Solenoid Strength & $ 170 \le \text{I}_{\text{s}}\text{(A)} \le 260$  \Tstrut \\
+		Phase of Gun & $-30^\circ \le \phi_{\text{gun}} \le 0^\circ$  \\
+		Quad 1  & $-8.8 \le \text{kQ}_{1}\text{(m}^{-1}) \le 8.8$  \\
+		Quad 2 & $-8.8 \le \text{kQ}_{2}\text{(m}^{-1}) \le 8.8$ 
+		%\bottomrule    
+	\end{tabular}
+\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Non-Intrusive Polynomial Chaos (PC)}{name=conditions,below=sims, above=bottom, column=3,row=0,span=3}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\begin{minipage}{0.45\textwidth}
+{\bf hold:} hold
+
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+
+
+\centering
+\vspace{1em}
+\textbf{hold}
+%\includegraphics[width=0.7\textwidth]{awa-medium-o4/sensresults}
+
+\end{minipage}
+\begin{minipage}{1.0\textwidth}
+	\centering
+	\vspace{-1.5em}
+	\textbf{hold}\\
+	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-emit_x}%
+	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-emit_z}% 	
+	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-energy.pdf}%
+	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-dE.pdf}%
+\end{minipage}	 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Acknowlegements and References}{name=ref,column=0,above=bottom, span=3}{%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\noindent
+%\centering
+%\vspace{-1.2em}
+\begin{minipage}{0.6\textwidth} %multicols}{2}
+	\noindent 
+	We gratefully acknowledge the computing resources
+	provided on Bebop and Merlin, HPC clusters operated by the LCRC at ANL and PSI respectively.
+	This work is partially supported by the U.S. DOE, Office of Science, under
+	contract DE-AC02-06CH11357 and grant number DE-SC0015479.
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+	\tiny
+	\begin{enumerate}
+		\item \url{https://gitlab.psi.ch/OPAL/src/wikis/home}
+		\item \url{arXiv:1509.08130v6 [physics.acc-ph]}
+		\item \url{arXiv:1610.06151 [physics.acc-ph]}
+		\item \url{arXiv:1612.05662 [physics.acc-ph]}
+		\item  {A.L. Edelen, et al., FEL'17, paper WEP031} %http://permalink.lanl.gov/object/tr?what=info:lanl-repo/lareport/LA-UR-17-28069
+	\end{enumerate}
+\end{minipage}
+
+%\end{multicols}
+}
+
+
+\end{poster}%
+%
+\end{document}
