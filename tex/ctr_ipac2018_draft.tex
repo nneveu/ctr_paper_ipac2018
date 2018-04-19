@@ -93,7 +93,7 @@ The experimental results are compared with Impact-T and OPAL-T numerical simulat
 The AWA Facility houses two rf photoinjectors, both 
 operating at \SI{1.3}{GHz}. The photoinjector used for 
 these studies consists of a gun and solenoids followed
-by six accelerating cavities, as shown in Fig.~\ref{fig:beamline}. 
+by six accelerating cavities, as shown in Fig.~\ref{beamline}. 
 This beam line is capable of low (\SI{0.1}{nC}) and 
 high charge (\SI{100}{nC}) operation. The bunch charge is 
 routinely adjusted for depending on the requirements 
@@ -108,13 +108,16 @@ and two beam acceleration \cite{tba}.
 
 
 \section{CTR Measurement Technique}
-Describe what CTR is here
+CTR ref goes here~\cite{ctr}
 
 \section{Simulations}
 Simulations of the AWA beam line shown in Fig~\ref{beamline}
 were performed in the PIC codes IMPACT~\cite{impact} and OPAL~\cite{opal}.
 The gun, accelerating cavities, and solenoids were modeled with 2D
-Poisson Superfish~\cite{fish} files. All field maps were in the T7 format. 
+Poisson/Superfish~\cite{fish} files. All field maps were in the T7 format.
+Input parameters for the simulations are shown in Table~\ref{simparam}.
+Two scenario were simulated, a low charge case at \SI{1}{nC}, and a 
+high charge case at \SI{40}{nC}. 
 
 \begin{figure*}[!tbh]
 	\centering
@@ -148,7 +151,7 @@ Poisson Superfish~\cite{fish} files. All field maps were in the T7 format.
 
 
 \section{Experimental Setup}
-The beam line layout is shown in Fig.~\ref{fig:beamline}. 
+The beam line layout is shown in Fig.~\ref{beamline}. 
 Bunches were allowed to propagate freely to the 
 CTR screen. The only focusing elements used were solenoids $S_1$ and
 $S_2$. As the bunches passed the CTR screen, light was
@@ -257,7 +260,7 @@ in \textit{Proc. IPAC’17},
 Copenhagen, Denmark, May 2016, 
 paper xxx, pp. xxx--xxx.\\
 
-\bibitem{item:2-2}
+\bibitem{ctr}
 A.~Alpha \emph{et al.}, 
 “A fascinating paper about FELs,”
 in \emph{Proc. FEL’13}, 
@@ -276,6 +279,11 @@ A.~Adelmann \emph{et al.},
 PSI, Zurich, Switzerland,
 Rep. PSI-PR-08-02, 2008-2017.
 
+\bibitem{fish}
+\emph{Reference Manual for the POISSON/SUPERFISH Group of 
+	Codes},  Los Alamos Accelerator Code Group,  
+ Los Alamos, NM, USA, 
+ Rep. LA-UR-87-126, Jan. 1987.
 \end{thebibliography}
 
 
@@ -462,19 +470,6 @@ references is ten or more.
 		Karlsruher Institut für Technologie, Karlsruhe, 
 		Germany, 2014.\\
 	\textcolor{jrept}{[Thesis]}
-\end{thebibliography}
-
-
-\section{MANUAL}
-
-\begin{thebibliography}{99} % Use for 1-9 references
-	\setcounter{enumi}{16}
-	\bibitem{item:17}
-		\emph{IEEE Editorial Style Manual}, 
-		IEEE Periodicals, 
-		Piscataway, NJ, USA, Oct. 2014, pp. 34-52; 
-		\url{http://www.ieee.org/documents/style_manual.pdf} \\
-	\textcolor{jmanu}{[Handbook/Manual, no hyperlink, no period after URL]}
 \end{thebibliography}
 
 
