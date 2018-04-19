@@ -113,12 +113,27 @@ Describe what CTR is here
 
 \section{Experimental Setup}
 The beam line layout is shown in Fig.~\ref{fig:beamline}. 
-Bunches were allowed to propagate freely until reaching the 
+Bunches were allowed to propagate freely to the 
 CTR screen. The only focusing elements used were solenoids $S_1$ and
 $S_2$. As the bunches passed the CTR screen, light was
-emitted through a window located next to the screen. 
-This light was captured using an interferometer outside
-the beam line, as shown in Fig~\ref{inter}. 
+emitted through a window located next to the screen, 
+as shown in Fig.~\ref{inter}. A slit was used to prevent
+background x-rays from reaching the bolometer.
+After passing the slit, the light was captured 
+using an interferometer outside the beam line, 
+also shown in Fig~\ref{inter}. 
+A remotely movable leg inside the interferometer was swept, 
+and the resulting signal fed to the bolometer, 
+which is shown in Fig.~\ref{bolo}. 
+ 
+\begin{figure*}[!tbh]
+	\centering
+	\begin{tikzpicture}[scale=1.0, text=black]
+	\input{tikz-linac.tex}
+	\end{tikzpicture}	
+	\caption{Beam line layout at the AWA.}
+	\label{fig:beamline}
+\end{figure*}
 
 
 
@@ -148,14 +163,6 @@ the beam line, as shown in Fig~\ref{inter}.
 \end{figure}
 
 
-\begin{figure*}[!tbh]
-	\centering
-	\begin{tikzpicture}[scale=1.0, text=black]
-	\input{tikz-linac.tex}
-	\end{tikzpicture}	
-	\caption{Beam line layout at the AWA.}
-	\label{fig:beamline}
-\end{figure*}
 
 
 
