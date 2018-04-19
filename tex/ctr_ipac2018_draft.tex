@@ -110,6 +110,42 @@ and two beam acceleration \cite{tba}.
 \section{CTR Measurement Technique}
 Describe what CTR is here
 
+\section{Simulations}
+Simulations of the AWA beam line shown in Fig~\ref{beamline}
+were performed in the PIC codes IMPACT~\cite{impact} and OPAL~\cite{opal}.
+The gun, accelerating cavities, and solenoids were modeled with 2D
+Poisson Superfish~\cite{fish} files. All field maps were in the T7 format. 
+
+\begin{figure*}[!tbh]
+	\centering
+	\begin{tikzpicture}[scale=1.0, text=black]
+	\input{tikz-linac.tex}
+	\end{tikzpicture}	
+	\caption{Beam line layout at the AWA.}
+	\label{beamline}
+\end{figure*}
+
+\begin{table}[hbt]
+	%   \vspace*{-.5\baselineskip}
+	\centering
+	\caption{Simulation Parameters}
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Parameter} & \textbf{Low Charge}  & \textbf{High Charge} \\
+		\midrule
+		Charge       & \SI{1}{nC}        & \SI{40}{nC}    \\ %[3pt]
+		Gun Gradient & \SI{65}{MV/m}     & \SI{65}{MV/m}  \\ %[3pt]
+		$S_1$        & \SI{500}{A}		 & \SI{500}{A}	  \\
+		$S_2$		 & \SI{}{A}   	 & \SI{185}{A}		 \\
+		Linac Phases & On crest          & On crest       \\
+		Laser FWHM   & \SI{1.5}{ps}      & \SI{1.5}{ps}   \\ %[3pt]
+		Laser Radius & \SI{2}{mm}        & \SI{9}{mm}     \\
+		\bottomrule
+	\end{tabular}
+	\label{simparam}
+	%   \vspace*{-\baselineskip}
+\end{table}
+
 
 \section{Experimental Setup}
 The beam line layout is shown in Fig.~\ref{fig:beamline}. 
@@ -124,19 +160,11 @@ using an interferometer outside the beam line,
 also shown in Fig~\ref{inter}. 
 A remotely movable leg inside the interferometer was swept, 
 and the resulting signal fed to the bolometer, 
-which is shown in Fig.~\ref{bolo}. 
+which is shown in Fig.~\ref{bolo}. The bolometer 
+was cooled with liquid helium. Period refilling of
+the helium was required throughout the day in order
+to keep the bolometer at \SI{4}{K}.
  
-\begin{figure*}[!tbh]
-	\centering
-	\begin{tikzpicture}[scale=1.0, text=black]
-	\input{tikz-linac.tex}
-	\end{tikzpicture}	
-	\caption{Beam line layout at the AWA.}
-	\label{fig:beamline}
-\end{figure*}
-
-
-
 \begin{figure}
 	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
 	\node (fig1) at (0,0)
@@ -166,28 +194,7 @@ which is shown in Fig.~\ref{bolo}.
 
 
 
-\section{Simulations}
-Describe OPAL/IMPACT? Show some plots of bunch length vs. Z?
-\begin{table}[hbt]
-	%   \vspace*{-.5\baselineskip}
-	\centering
-	\caption{Simulation Parameters}
-	\begin{tabular}{lcc}
-		\toprule
-		\textbf{Parameter} & \textbf{Low Charge}  & \textbf{High Charge} \\
-		\midrule
-		Charge       & \SI{1}{nC}        & \SI{40}{nC}    \\ %[3pt]
-		Gun Gradient & \SI{65}{MV/m}     & \SI{65}{MV/m}  \\ %[3pt]
-		$S_1$        & \SI{500}{A}		 & \SI{500}{A}	  \\
-		$S_2$		 & \SI{}{A}   	 & \SI{185}{A}		 \\
-		Linac Phases & On crest          & On crest       \\
-		Laser FWHM   & \SI{1.5}{ps}      & \SI{1.5}{ps}   \\ %[3pt]
-		Laser Radius & \SI{2}{mm}        & \SI{9}{mm}     \\
-		\bottomrule
-	\end{tabular}
-	\label{simparam}
-	%   \vspace*{-\baselineskip}
-\end{table}
+
 
 
 \section{Data Analysis}
@@ -256,6 +263,18 @@ A.~Alpha \emph{et al.},
 in \emph{Proc. FEL’13}, 
 New York, NY, USA, Aug. 2013, 
 paper WEP033, pp. 27--29.\\
+
+\bibitem{impact}
+J.~Qiang \emph{et al.},
+“...,”
+, California, USA,
+Rep. xxxx, 20xx-20xx.
+
+\bibitem{opal}
+A.~Adelmann \emph{et al.},
+“The OPAL (Object Oriented Parallel Accelerator Library) framework,”
+PSI, Zurich, Switzerland,
+Rep. PSI-PR-08-02, 2008-2017.
 
 \end{thebibliography}
 
@@ -335,55 +354,7 @@ references is ten or more.
 \definecolor{junpu}{cmyk} {0.00, 0.83, 0.65, 0.00}
 
 
-\subsection{Abbreviated Form}
-
-\begin{thebibliography}{9} % Use for 1-9 references
-
-	
-
-	
-	
-	\bibitem{item:2-3}	
-	A.~Alpha, B.~T.~Beta, C.~Gamma, and D.~Delta, 
-	“An overview of control systems,”
-	in \emph{Proc. ICALEPCS’11}, Grenoble, France, Oct. 2011, 
-	paper TUP014, pp. 89--91.\\
-	\textcolor{jgreen}{[Conference Proceedings, four authors; optional paper ID]}
-\end{thebibliography}
-
-
-\section{UNPUBLISHED PAPER PRESENTED AT A PREVIOUS CONFERENCE}
-
-\subsection{Abbreviated Form}
-
-\begin{thebibliography}{9} % Use for 1-9 references
-\setcounter{enumi}{3}
- \bibitem{item:42}
-	A.~Alpha and B.~T.~Beta, 
-	“An interesting talk,”
-	presented at IPAC’14, 
-	Dresden, Germany, Jun. 2014, paper MOP057, unpublished.\\
-	\textcolor{jred}{[Unpublished paper; conference name in normal font; paper
-	ID may only be given if material supplementing the proceedings
-	exists on the JACoW website, e.\,g., PDF of talk]}
-\end{thebibliography}
-
-
 \section{PAPER PRESENTED AT THE CURRENT CONFERENCE}
-
-\subsection{Complete Form}
-
-\begin{thebibliography}{9} % Use for 1-9 references
-\setcounter{enumi}{4}
- \bibitem{item:51}
-	A.~Alpha and B.~T.~Beta, 
-	“An interesting talk,”
-	presented at the 7th Int. Particle Accelerator Conf. (IPAC’16), 
-	Busan, Korea, May 2016, 
-	paper MOAB01, this conference.\\
-	\textcolor{jgrepc}{[Current conference; conference name in normal font; the
-			           wording “this conference” is optional]}
-\end{thebibliography}
 
 \subsection{Abbreviated Form}
 
@@ -399,9 +370,7 @@ references is ten or more.
 		wording “this conference” is optional]}
 \end{thebibliography}
 
-
 \section{PAPER PUBLISHED IN, OR SUBMITTED TO, A PERIODICAL}
-
 \begin{thebibliography}{99} % Use for 1-9 references
   \setcounter{enumi}{5}
 	\bibitem{item:6}
