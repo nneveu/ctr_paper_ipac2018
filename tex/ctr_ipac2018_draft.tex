@@ -116,8 +116,10 @@ were performed in the PIC codes IMPACT~\cite{impact} and OPAL~\cite{opal}.
 The gun, accelerating cavities, and solenoids were modeled with 2D
 Poisson/Superfish~\cite{fish} files. All field maps were in the T7 format.
 Input parameters for the simulations are shown in Table~\ref{simparam}.
-Two scenario were simulated, a low charge case at \SI{1}{nC}, and a 
-high charge case at \SI{40}{nC}. 
+Note that on crest refers to the phase of max energy gain.
+In the case of the gun, a -~$20^{\circ}$ phase is measured 
+w.r.t the phase of max energy gain. 
+In other words, we ran $-20^{\circ}$ off crest.
 
 \begin{figure*}[!tbh]
 	\centering
@@ -127,6 +129,9 @@ high charge case at \SI{40}{nC}.
 	\caption{Beam line layout at the AWA.}
 	\label{beamline}
 \end{figure*}
+
+Two scenario were simulated, a low charge case at \SI{1}{nC}, and a 
+high charge case at \SI{40}{nC}. 
 
 \begin{table}[hbt]
 	%   \vspace*{-.5\baselineskip}
@@ -138,6 +143,7 @@ high charge case at \SI{40}{nC}.
 		\midrule
 		Charge       & \SI{1}{nC}        & \SI{40}{nC}    \\ %[3pt]
 		Gun Gradient & \SI{65}{MV/m}     & \SI{65}{MV/m}  \\ %[3pt]
+		Gun Phase    & \SI{-20}{}$^{\circ}$ & \SI{-20}{}$^{\circ}$ \\		 
 		$S_1$        & \SI{500}{A}		 & \SI{500}{A}	  \\
 		$S_2$		 & \SI{}{A}   	 & \SI{185}{A}		 \\
 		Linac Phases & On crest          & On crest       \\
@@ -193,13 +199,6 @@ to keep the bolometer at \SI{4}{K}.
 	\label{bolo}
 \end{figure}
 
-
-
-
-
-
-
-
 \section{Data Analysis}
 Give link to code used to find bunch length
 
@@ -237,32 +236,36 @@ Beam Physics of the American Physical Society.
 
 \begin{thebibliography}{9}
 \bibitem{eex}
-A.~Alpha and B.~T.~Beta, “EEX....”
-in \textit{Proc. IPAC’17}, 
-Copenhagen, Denmark, May 2016, 
-paper xxx, pp. xxx--xxx.\\
+G.~Ha \emph{et al.}, “Demonstration of Current Profile 
+Shaping using Double Dog-Leg Emittance Exchange Beam 
+Line at Argonne Wakefield Accelerator”
+in \textit{Proc. IPAC’16}, 
+Busan, South Korea, May 2016, 
+paper TUOBB01.\\
 
 \bibitem{pets}
-A.~Alpha and B.~T.~Beta, “PETS....”
-in \textit{Proc. IPAC’17}, 
-Copenhagen, Denmark, May 2016, 
-paper xxx, pp. xxx--xxx.\\
+J.~Shao \emph{et al.}, “PETS....”
+in \textit{Proc. IPAC’18}, 
+Vancouver, Canada, May 2018, 
+paper xxx.\\
 
 \bibitem{therm}
-A.~Alpha \emph{et al.}, “THERM....”
+L.~Zheng \emph{et al.}, “Measurements of Thermal Emittance 
+for Cesium Telluride Photocathodes in an L-Band RF Gun”
 in \textit{Proc. IPAC’17}, 
-Copenhagen, Denmark, May 2016, 
-paper xxx, pp. xxx--xxx.\\
+Copenhagen, Denmark, May 2017, 
+paper TUPAB074.\\
 
 \bibitem{tba}
-A.~Alpha and B.~T.~Beta, “TBA....”
+J.~Shao \emph{et al.}, “Recent Two-Beam 
+Acceleration Activities at Argonne Wakefield Accelerator Facility”
 in \textit{Proc. IPAC’17}, 
-Copenhagen, Denmark, May 2016, 
-paper xxx, pp. xxx--xxx.\\
+Copenhagen, Denmark, May 2017, 
+paper WEPVA022.\\
 
 \bibitem{ctr}
 A.~Alpha \emph{et al.}, 
-“A fascinating paper about FELs,”
+“A fascinating paper about CTR,”
 in \emph{Proc. FEL’13}, 
 New York, NY, USA, Aug. 2013, 
 paper WEP033, pp. 27--29.\\
