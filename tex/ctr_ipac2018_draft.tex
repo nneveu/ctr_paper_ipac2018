@@ -112,14 +112,49 @@ Describe what CTR is here
 
 
 \section{Experimental Setup}
-Describe experimental setup used to take data
+The beam line layout is shown in Fig.~\ref{fig:beamline}. 
+Bunches were allowed to propagate freely until reaching the 
+CTR screen. The only focusing elements used were solenoids $S_1$ and
+$S_2$. As the bunches passed the CTR screen, light was
+emitted through a window located next to the screen. 
+This light was captured using an interferometer outside
+the beam line, as shown in Fig~\ref{inter}. 
+
+
+
+\begin{figure}
+	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
+	\node (fig1) at (0,0)
+	{\includegraphics[width=0.5\textwidth]{images/interferometer}};
+	\node[fill=white, inner sep=2pt] (txt2) at (35,15) {Interferometer};
+	\node[fill=white, inner sep=2pt, rotate=26] (txt2) at (18,19.5) {Slit};	
+	\node[fill=white, inner sep=2pt, rotate=20] (txt2) at (13,27) {Window};
+	\end{tikzpicture}
+	\caption{Interferometer used to capture CTR light as it exited a 
+			window on the beam line. }
+	\label{inter}
+\end{figure}
+
+%\begin{figure}
+%	\includegraphics[width=0.5\textwidth]{}
+%	\caption{}
+%	\label{inter}
+%\end{figure}
+
+
+
+\begin{figure}
+	\includegraphics[width=0.5\textwidth]{images/bolometer}
+	\caption{Interferometer used to capture CTR light as it exited a 
+		window in the beam line.}
+	\label{bolo}
+\end{figure}
 
 \begin{figure*}[!tbh]
 	\centering
 	\begin{tikzpicture}[scale=1.0, text=black]
 	\input{tikz-linac.tex}
-	\end{tikzpicture}
-	%\includegraphics*[width=\textwidth]{jacow2017}	
+	\end{tikzpicture}	
 	\caption{Beam line layout at the AWA.}
 	\label{fig:beamline}
 \end{figure*}
@@ -169,8 +204,11 @@ Any conclusions should be in a separate section directly preceding
 the \SEC{Acknowledgment}, \SEC{Appendix}, or \SEC{References} sections, in that
 order.
 
-\section{acknowledgment}
-We gratefully acknowledge the computing resources
+\section{acknowledgments}
+We would like to thank 
+Northern Illinois University (NIU) for providing the 
+interferometer used in this experiment. 
+We also gratefully acknowledge the computing resources
 provided on Bebop, a high-performance computing cluster
 operated by the LCRC at Argonne National Laboratory.
 This material is based upon work supported by the 
@@ -190,24 +228,29 @@ Copenhagen, Denmark, May 2016,
 paper xxx, pp. xxx--xxx.\\
 
 \bibitem{pets}
-A.~Alpha and B.~T.~Beta, “EEX....”
+A.~Alpha and B.~T.~Beta, “PETS....”
 in \textit{Proc. IPAC’17}, 
 Copenhagen, Denmark, May 2016, 
 paper xxx, pp. xxx--xxx.\\
 
 \bibitem{therm}
-A.~Alpha and B.~T.~Beta, “EEX....”
+A.~Alpha \emph{et al.}, “THERM....”
 in \textit{Proc. IPAC’17}, 
 Copenhagen, Denmark, May 2016, 
 paper xxx, pp. xxx--xxx.\\
 
 \bibitem{tba}
-A.~Alpha and B.~T.~Beta, “EEX....”
+A.~Alpha and B.~T.~Beta, “TBA....”
 in \textit{Proc. IPAC’17}, 
 Copenhagen, Denmark, May 2016, 
 paper xxx, pp. xxx--xxx.\\
 
-
+\bibitem{item:2-2}
+A.~Alpha \emph{et al.}, 
+“A fascinating paper about FELs,”
+in \emph{Proc. FEL’13}, 
+New York, NY, USA, Aug. 2013, 
+paper WEP033, pp. 27--29.\\
 
 \end{thebibliography}
 
@@ -257,11 +300,6 @@ in parentheses [e.g., Eq. (1)].
 	\texttt{boxit} option.
 \end{Itemize}
 
-\subsection{Referencing JACoW Proceedings}
-
-The format for published JACoW proceedings papers
-can be readily deduced from Refs. [1-3].
-
 \subsubsection{Author Listing} Careful attention should be given to the
 placing of commas and the use of ‘and’ in the author list.
 In particular, for the case of six or more authors
@@ -297,14 +335,8 @@ references is ten or more.
 \begin{thebibliography}{9} % Use for 1-9 references
 
 	
-	\bibitem{item:2-2}
-	A.~Alpha \emph{et al.}, 
-	“A fascinating paper about FELs,”
-	in \emph{Proc. FEL’13}, 
-	New York, NY, USA, Aug. 2013, 
-	paper WEP033, pp. 27--29.\\
-	\textcolor{jgreen}{[Conference Proceedings, for six or more authors use \emph{et al.};	
-		paper ID is optional]}
+
+	
 	
 	\bibitem{item:2-3}	
 	A.~Alpha, B.~T.~Beta, C.~Gamma, and D.~Delta, 
