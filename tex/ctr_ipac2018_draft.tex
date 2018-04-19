@@ -135,20 +135,18 @@ the beam line, as shown in Fig~\ref{inter}.
 	\label{inter}
 \end{figure}
 
-%\begin{figure}
-%	\includegraphics[width=0.5\textwidth]{}
-%	\caption{}
-%	\label{inter}
-%\end{figure}
-
-
-
 \begin{figure}
-	\includegraphics[width=0.5\textwidth]{images/bolometer}
-	\caption{Interferometer used to capture CTR light as it exited a 
-		window in the beam line.}
+	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
+	\node (fig1) at (0,0)
+	{\includegraphics[width=0.5\textwidth]{images/bolometer}};
+	\node[fill=white, inner sep=2pt] (txt2) at (35,8) {Interferometer};	
+	\node[fill=white, inner sep=2pt] (txt2) at (55,25) {Window};	
+	\node[fill=white, inner sep=2pt] (txt2) at (22,35) {Bolometer};
+	\end{tikzpicture}
+	\caption{Bolometer. }
 	\label{bolo}
 \end{figure}
+
 
 \begin{figure*}[!tbh]
 	\centering
