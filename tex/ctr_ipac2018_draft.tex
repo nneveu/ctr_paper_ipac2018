@@ -87,7 +87,7 @@ The bunch length measurements were taken at different charge densities
 using a metallic screen and a Martin-Puplett interferometer to perform 
 autocorrelation scans of the corresponding coherent transition radiation (CTR). 
 A liquid helium-cooled 4K bolometer was used to register the interferometer signal. 
-The experimental results are compared with Impact-T and OPAL-T numerical simulations.
+The experimental results are compared with OPAL-T numerical simulations.
 \end{abstract}
 
 
@@ -99,7 +99,8 @@ by six accelerating cavities, as shown in Fig.~\ref{beamline}.
 This beam line is capable of low (\SI{0.1}{nC}) and 
 high charge (\SI{100}{nC}) operation.
 Both beamlines utilize the 248 nm UV laser 
-to generate photoelectrons with the FWHM duration ranging from 1.5 ps to 10 ps.
+to generate photoelectrons with the Full Width Half Maximum
+(FWHM) duration ranging from 1.5 ps to 10 ps.
 The bunch charge is 
 routinely adjusted for depending on the requirements 
 of the experiments downstream of the photoinjector.
@@ -190,24 +191,16 @@ Bunches were allowed to propagate freely to the
 CTR screen. The only focusing elements used were solenoids $S_1$ and
 $S_2$. As the bunches passed the CTR screen, light was
 emitted through a window located next to the screen, 
-as shown in Fig.~\ref{inter}. A slit was used to prevent
+as shown in Fig.~\ref{bolo}. A slit was used to prevent
 background x-rays from reaching the bolometer.
 After passing the slit, the light was captured 
 using an interferometer outside the beam line, 
-also shown in Fig~\ref{inter}. 
+also shown in Fig~\ref{bolo}. 
 A remotely movable leg inside the interferometer was swept, 
-and the resulting signal fed to the bolometer, 
-which is shown in Fig.~\ref{bolo}. The bolometer 
-was cooled with liquid helium. Period refilling of
-the helium was required throughout the day in order
+and the resulting signal fed to the bolometer. 
+The bolometer was cooled with liquid helium. 
+Periodic refilling of the helium was required throughout the day in order
 to keep the bolometer at \SI{4}{K}.
- 
-\begin{figure}\label{facilitypics}
- \includegraphics[width=0.46\linewidth]{images/bolometer}
- \includegraphics[width=0.46\linewidth]{images/interferometer}
- \caption{IR labs bolometer (left) and MPI interferometer (right) used in the experiment.}
-\end{figure}
-
  
 \begin{figure}
 	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
@@ -216,40 +209,52 @@ to keep the bolometer at \SI{4}{K}.
 	\node[fill=white, inner sep=2pt] (txt2) at (35,15) {Interferometer};
 	\node[fill=white, inner sep=2pt, rotate=26] (txt2) at (18,19.5) {Slit};	
 	\node[fill=white, inner sep=2pt, rotate=20] (txt2) at (13,27) {Window};
-	\end{tikzpicture}
-	\caption{Interferometer used to capture CTR light as it exited a 
-			window on the beam line. }
-	\label{inter}
-\end{figure}
 
-\begin{figure}
-	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
-	\node (fig1) at (0,0)
+	\node (fig2) at (0,-50)
 	{\includegraphics[width=0.5\textwidth]{images/bolometer}};
-	\node[fill=white, inner sep=2pt] (txt2) at (35,8) {Interferometer};	
-	\node[fill=white, inner sep=2pt] (txt2) at (55,25) {Window};	
-	\node[fill=white, inner sep=2pt] (txt2) at (22,35) {Bolometer};
+	\node[fill=white, inner sep=2pt] (txt2) at (35,-42) {Interferometer};	
+	\node[fill=white, inner sep=2pt] (txt2) at (55,-25) {Window};	
+	\node[fill=white, inner sep=2pt] (txt2) at (22,-15) {Bolometer};
 	\end{tikzpicture}
-	\caption{Bolometer. }
+	\caption{IR labs bolometer and MPI interferometer used in the experiment
+		 to capture CTR light as it exited a window on the beam line. }
+	%\label{inter}
+	%\caption{Bolometer. }
 	\label{bolo}
 \end{figure}
 
 
 \section{Results}
 Compare simulations to experimental measurements
-\begin{figure}[!htb]
+\begin{table}[hbt]
 	%   \vspace*{-.5\baselineskip}
 	\centering
-	%\includegraphics*[width=174pt]{JACpic_mc}
-	\caption{Layout of papers.}
-	\label{l2ea4-f1}
+	\caption{Experimental Measurements}
+	\begin{tabular}{lcc}
+		\toprule
+		\textbf{Charge} & \textbf{Bunch Length RMS}   \\
+		\midrule
+		\SI{1}{nC}   & \SI{1}{mm}     \\ %[3pt]
+		\SI{40}{nC}  & \SI{1}{mm}     \\ %[3pt]
+		\SI{40}{nC}  & \SI{2}{mm}      \\
+		\SI{40}{nC}  & \SI{2}{mm}   \\ %[3pt]
+		\SI{40}{nC}  & \SI{2}{mm}     \\
+		\bottomrule
+	\end{tabular}
+	\label{exp}
 	%   \vspace*{-\baselineskip}
-\end{figure}
+\end{table}
 
 \section{Conclusion}
-Any conclusions should be in a separate section directly preceding
-the \SEC{Acknowledgment}, \SEC{Appendix}, or \SEC{References} sections, in that
-order.
+Simulations of an AWA photoinjector were done in OPAL.
+Experimental measurements of the bunch length were done using CTR.
+The data was analyzed and compared to simulation results.
+The bunch length for 1 and \SI{40}{nC} is reported.
+There is good agreement between the simulations and 
+experimental measurements. This method can now be used
+in future experiments at the AWA to measure bunch length.
+
+
 
 \section{acknowledgments}
 We would like to thank 
@@ -267,49 +272,44 @@ Accelerator Science Program and the Division of
 Beam Physics of the American Physical Society.
 
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
 \bibitem{eex}
 G.~Ha \emph{et al.}, “Demonstration of Current Profile 
 Shaping using Double Dog-Leg Emittance Exchange Beam 
 Line at Argonne Wakefield Accelerator”
 in \textit{Proc. IPAC’16}, 
 Busan, South Korea, May 2016, 
-paper TUOBB01.\\
+paper TUOBB01.
 
 \bibitem{pets}
 J.~Shao \emph{et al.}, “PETS....”
 in \textit{Proc. IPAC’18}, 
 Vancouver, Canada, May 2018, 
-paper xxx.\\
+paper xxx.
 
 \bibitem{therm}
 L.~Zheng \emph{et al.}, “Measurements of Thermal Emittance 
 for Cesium Telluride Photocathodes in an L-Band RF Gun”
 in \textit{Proc. IPAC’17}, 
 Copenhagen, Denmark, May 2017, 
-paper TUPAB074.\\
+paper TUPAB074.
 
 \bibitem{tba}
 J.~Shao \emph{et al.}, “Recent Two-Beam 
 Acceleration Activities at Argonne Wakefield Accelerator Facility”
 in \textit{Proc. IPAC’17}, 
 Copenhagen, Denmark, May 2017, 
-paper WEPVA022.\\
-
-\bibitem{PhysRevAccelBeams.20.103404}
-A.~Halavanau \textit{et al.},
-%"Spatial Control of Photoemitted Electron Beams using a Micro-Lens-Array Transverse-Shaping Technique",
-\newblock \emph{Phys. Rev. Accel. Beams}, 20:103404, (2017).
+paper WEPVA022.
 
 \bibitem{Happek}
 U.~Happek, A.~J. Sievers, and E.~B. Blum,
 %\newblock "Observation of coherent transition radiation",
-\newblock \emph{Phys. Rev. Lett.}, 67:2962--2965, (1991).
+\emph{Phys. Rev. Lett.}, 67:2962--2965, (1991).
 
 \bibitem{WBarry}
 W. Barry,
 %\newblock "Measurement of subpicosecond bunch profiles using coherent transition radiation",
-\newblock \emph{AIP Conference Proceedings}, 390(1):173--185, (1997).
+\emph{AIP Conference Proceedings}, 390(1):173--185, 1997.
 
 \bibitem{PhysRevSTAB.9.082801}
 D.~Mihalcea, C.~L. Bohn, U.~Happek, and P.~Piot,
@@ -319,6 +319,12 @@ D.~Mihalcea, C.~L. Bohn, U.~Happek, and P.~Piot,
 \bibitem{IRlabs}
 IR~Labs,
 \newblock \url{http://www.infraredlaboratories.com/home.html}
+
+\bibitem{PhysRevAccelBeams.20.103404}
+A.~Halavanau \textit{et al.},
+%"Spatial Control of Photoemitted Electron Beams using a Micro-Lens-Array Transverse-Shaping Technique",
+\emph{Phys. Rev. Accel. Beams}, 20:103404, 2017.
+
 
 \bibitem{ctr}
 A.~Alpha \emph{et al.}, 
