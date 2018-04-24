@@ -432,7 +432,7 @@
 \clubpenalty10000\widowpenalty10000
 \flushbottom
 %-----------------------------------------------------------------------
-
+\iffalse
 %avoid bug of fixltx2e:
 %http://www.latex-project.org/cgi-bin/ltxbugs2html?pr=latex/4023
 \RequirePackage{fixltx2e}%
@@ -474,4 +474,5 @@
     \endgroup
   \fi}
 
+\fi
 \endinput
