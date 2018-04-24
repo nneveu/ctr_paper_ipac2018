@@ -112,10 +112,11 @@ Recent experiments include emittance exchange \cite{eex},
 structure tests \cite{pets}, thermal emittance measurements \cite{therm}, 
 and two beam acceleration \cite{tba}. 
 Recently, AWA laser system was upgraded with the microlens array (MLA) setup
-that yields very transversely homegeneous bunches.
+that yields very transversely homogeneous bunches.
 The effect of the MLA generated beam on the final electron 
 bunch length is not yet investigated, therefore motivating
 this work.
+
 
 
 \section{Measurement Technique}
@@ -125,7 +126,7 @@ In brief, the CTR is transported into Martin-Puplett interferometer (MPI)
 where it's split and directed into two MPI arms with a half-transparent pellicle \cite{PhysRevSTAB.9.082801}. 
 The CTR beams are then combined together at the exit of the MPI with the variable path difference.
 The resulting CTR intensity is registered with a liquid helium cooled IR Labs
-bolometer \cite{IRlabs} as function of path difference; see Fig. \ref{facilitypics}.
+bolometer \cite{IRlabs} as function of path difference.
 The path difference is then converted into time as $\Delta \tau = 2 \Delta x$.
 The resulting FWHM bunch duration is determined from the Gaussian fit of 
 the interferogram; see Fig. \ref{interferogram}.
@@ -149,7 +150,6 @@ Note that on crest refers to the phase of max energy gain.
 In the case of the gun, a -~$20^{\circ}$ phase is measured 
 w.r.t the phase of max energy gain. 
 In other words, we ran $-20^{\circ}$ off crest.
-
 \begin{figure*}[!tbh]
 	\centering
 	\begin{tikzpicture}[scale=1.0, text=black]
@@ -183,6 +183,8 @@ high charge case at \SI{40}{nC}.
 	\label{simparam}
 	%   \vspace*{-\baselineskip}
 \end{table}
+
+Simulations...
 
 
 \section{Experimental Setup}
@@ -223,11 +225,9 @@ to keep the bolometer at \SI{4}{K}.
 	\label{bolo}
 \end{figure}
 
-
 \section{Results}
 Compare simulations to experimental measurements
 \begin{table}[hbt]
-	%   \vspace*{-.5\baselineskip}
 	\centering
 	\caption{Experimental Measurements}
 	\begin{tabular}{lcc}
@@ -242,8 +242,13 @@ Compare simulations to experimental measurements
 		\bottomrule
 	\end{tabular}
 	\label{exp}
-	%   \vspace*{-\baselineskip}
 \end{table}
+
+\begin{figure}
+	\includegraphics[width=1.0\linewidth]{images/measurement}
+	\caption{An example interferogram for Q=1 nC and laser pulse FWHM of 3 ps.}
+	\label{sims}
+\end{figure}
 
 \section{Conclusion}
 Simulations of an AWA photoinjector were done in OPAL.
@@ -320,19 +325,6 @@ D.~Mihalcea, C.~L. Bohn, U.~Happek, and P.~Piot,
 IR~Labs,
 \newblock \url{http://www.infraredlaboratories.com/home.html}
 
-\bibitem{PhysRevAccelBeams.20.103404}
-A.~Halavanau \textit{et al.},
-%"Spatial Control of Photoemitted Electron Beams using a Micro-Lens-Array Transverse-Shaping Technique",
-\emph{Phys. Rev. Accel. Beams}, 20:103404, 2017.
-
-
-\bibitem{ctr}
-A.~Alpha \emph{et al.}, 
-“A fascinating paper about CTR,”
-in \emph{Proc. FEL’13}, 
-New York, NY, USA, Aug. 2013, 
-paper WEP033, pp. 27--29.\\
-
 \bibitem{opal}
 A.~Adelmann \emph{et al.},
 “The OPAL (Object Oriented Parallel Accelerator Library) framework,”
@@ -342,8 +334,15 @@ Rep. PSI-PR-08-02, 2008-2017.
 \bibitem{fish}
 \emph{Reference Manual for the POISSON/SUPERFISH Group of 
 	Codes},  Los Alamos Accelerator Code Group,  
- Los Alamos, NM, USA, 
- Rep. LA-UR-87-126, Jan. 1987.
+Los Alamos, NM, USA, 
+Rep. LA-UR-87-126, Jan. 1987.
+
+\bibitem{PhysRevAccelBeams.20.103404}
+A.~Halavanau \textit{et al.},
+%"Spatial Control of Photoemitted Electron Beams using a Micro-Lens-Array Transverse-Shaping Technique",
+\emph{Phys. Rev. Accel. Beams}, 20:103404, 2017.
+
+
 \end{thebibliography}
 
 
