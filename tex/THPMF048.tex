@@ -131,7 +131,7 @@ The path difference is then converted into time as $\Delta \tau = 2 \Delta x$.
 The resulting FWHM bunch duration is determined from the Gaussian fit of 
 the interferogram; see Fig. \ref{interferogram}.
 \begin{figure}
- \includegraphics[width=1.0\linewidth]{images/measurement}
+ \includegraphics[width=1.0\linewidth]{images/THPMF048f1}
  \caption{An example interferogram for Q=30 nC and laser pulse FWHM of 1.5 ps.}
  \label{interferogram}
 \end{figure}
@@ -143,7 +143,7 @@ interference pattern as a function of time delay in the MPI is similar to that p
 \begin{figure*}[hbt]
 	\centering
 	\begin{tikzpicture}[scale=0.8, text=black]
-	\input{tikz-linac.tex}
+	\input{THPMF048f2.tex}
 	\end{tikzpicture}	
 	\caption{Beam line layout at the AWA.}
 	\label{beamline}
@@ -173,13 +173,13 @@ MLA and relay optics.
 \begin{figure}
 	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
 	\node (fig1) at (0,0)
-	{\includegraphics[width=0.5\textwidth]{images/interferometer}};
+	{\includegraphics[width=0.5\textwidth]{images/THPMF048f3}};
 	\node[fill=white, inner sep=2pt] (txt2) at (35,15) {Interferometer};
 	\node[fill=white, inner sep=2pt, rotate=26] (txt2) at (18,19.5) {Slit};	
 	\node[fill=white, inner sep=2pt, rotate=20] (txt2) at (13,27) {Window};
 
 	\node (fig2) at (0,-50)
-	{\includegraphics[width=0.5\textwidth]{images/bolometer}};
+	{\includegraphics[width=0.5\textwidth]{images/THPMF048f4}};
 	\node[fill=white, inner sep=2pt] (txt2) at (35,-42) {Interferometer};	
 	\node[fill=white, inner sep=2pt] (txt2) at (55,-25) {Window};	
 	\node[fill=white, inner sep=2pt] (txt2) at (22,-15) {Bolometer};
@@ -240,15 +240,15 @@ and laser parameters to have the most impact on the simulation values.
 Comparison of simulation and experimental results are shown in Fig.~\ref{sims}.
 \begin{figure*}[!tbh]
 	\centering
-	\includegraphics[width=0.8\linewidth]{images/bunchlength}
+	\includegraphics[width=0.8\linewidth]{images/THPMF048f5}
 	\caption{Comparison of simulations and experimental measurements.}
 	\label{sims}
 \end{figure*}
-While, we do not have an exact match, the results agree within reason.
+While, we do not have an exact match, the results follow the same trends.
 The discrepancies indicate there are still adjustments that can be made
 to the simulation model. We will continue to try to improve agreement
 as more of these measurements are made. 
-This can include better measurements of the beam energy, and careful attention to other 
+This can include better measurements of the beam energy and careful attention to other 
 beam line parameters such as the laser radius and solenoid strengths.
 In the case of high charge simulations, where the agreement is the worst, 
 more consideration is needed for large charge fluctuations in the data.
