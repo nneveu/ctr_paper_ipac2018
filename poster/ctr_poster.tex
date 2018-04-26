@@ -1,5 +1,5 @@
-\documentclass[landscape,final,a0paper,fontscale=0.277]{baposter}
-
+\documentclass[portrait,final,paperwidth=92cm, paperheight=152cm,  fontscale=0.277]{baposter}
+%a0paper,
 \usepackage{calc}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -9,7 +9,7 @@
 \usepackage{rotating}
 \usepackage{bm}
 \usepackage{url}
-
+\usepackage{setspace}
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{siunitx}
@@ -77,7 +77,6 @@
 %%%---------------------------------------------------------------------------
 %%% Format it to your taste with the options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{lightblue}{rgb}{0.145,0.6666,1}
 
 \definecolor{silver}{cmyk}{0,0,0,0.3}
 \definecolor{black}{cmyk}{0,0,0.0,1.0}
@@ -88,13 +87,6 @@
 \definecolor{KTHsilver}{cmyk}{0,0,0,0.35}
 \definecolor{KTHbeige}{cmyk}{0,0.03,0.19,0.04}
 
-% Argonne Logo Colors
-\definecolor{ArgoneLogoBlue}{RGB}{4,146,210}
-\definecolor{ArgoneLogoRed}{RGB}{228,32,41}
-\definecolor{ArgoneLogoGreen}{RGB}{120,202,42}
-\definecolor{PMSCoolGray}{RGB}{112,109,110}
-
-%\definecolor{KTHBlue}{RGB}{25,84,166}
 \begin{poster}{
   % Poster Options
 	% Show grid to help with alignment
@@ -116,7 +108,7 @@
 	% Format of text header
 	eyecatcher=true,
 	headerborder=closed,
-	headerheight=0.14\textheight,
+	headerheight=0.15\textheight,
 	%  textfont=\sc, An example of changing the text font
 	headershape=roundedright,
 	headershade=shadelr,
@@ -130,151 +122,241 @@
 % Eye Catcher
 {
 	
-	\makebox[12em][l]{
-		%\includegraphics[height=21.5em]{combo2-logo}
-} }
-%{\includegraphics[height=2em]{psi_logo_blue}\\%
-%\includegraphics[height=3em]{argonne_logo}} 
+} 
 % Title
-{\bf\textsc{CTR }}%\vspace{0.1em}}
+{\bf\textsc{Bunch Length Measurements Using \\CTR 
+		at the AWA with Comparison to Simulation}}%\vspace{0.1em}}
 % Authors
-{%\vspace{0.3em}
-	N. Neveu$^{1,2}$, A. Halavanau$^3$ \\
-	IIT and ANL \\
+{\vspace{1em}
+	N. Neveu\textsuperscript{1}, L. Spentzouris, Illinois Institute of Technology, Chicago, IL, USA \\
+	A. Halavanau, P. Piot\textsuperscript{2}, Northern Illinois University, DeKalb, IL, USA \\
+	J. G. Power, E. Wisniewski, C. Whiteford, \textsuperscript{1} ANL, Lemont, IL, USA \\
+	S. Antipov, Euclid Techlabs LLC, Solon, OH, USA \\
+	\textsuperscript{2} also at Fermilab, Batavia, IL, USA \\
     }
 % University logo
 {% The makebox allows the title to flow into the logo, this is a hack because of the L shaped logo.
-		\makebox[12em][r]{%
-			\hfill
-%				\includegraphics[height=11em]{iit-logo}
-}
+			%\makebox[3em][r]{
+			\includegraphics[height=17em]{combo_logo_niu}%}
 
 }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{AWA Facility}{name=problem,column=0,row=0, span=2}{
+\headerbox{AWA Facility}{name=problem,column=0,row=0, span=2, }{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Argonne Wakefield Accelerator (AWA) facility
-houses two rf photoinjectors operating at \SI{1.3}{GHz}. 
-The \SI{70}{MeV} beam line consists of an rf gun with a 
-$\text{Cs}_2\text{Te}$ cathode, followed by six normal conducting linac cavities, 
-and four quadrupoles. Follwing the quads, a kicker and septum will be installed
-in the near future.
-\vspace{0.5em}
+The photoinjector used for these studies consists of a gun and solenoids followed
+by six accelerating cavities, see figure below. 
+The 248 nm UV laser has a Full Width Half Maximum
+(FWHM) duration ranging from 1.5 ps to 10 ps.
+Typical operating charges are 1, 4, 10, and \SI{40}{nC}. 
+While these are the most common operating modes, 
+other charges have been requested 
+and provided depending on the experiment.
+Recent experiments include emittance exchange, 
+structure tests, thermal emittance measurements, 
+and two beam acceleration. 
+The AWA laser system was upgraded with the microlens array (MLA) setup
+that yields very transversely homogeneous bunches.
+The effect of the MLA generated beam on the final electron 
+bunch length is not yet investigated, therefore motivating
+this work.
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{hold}{name=sims,column=2,row=0,span=2}{
+\headerbox{Measurement Technique}{name=measure,column=2,row=0,span=4, bottomaligned=problem}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-hold
-\vspace{0.5em}
+\begin{minipage}{0.48\textwidth}
+	We performed autocorrelation scans of the CTR produced by an electron distribution.
+	The CTR is transported into a Martin-Puplett interferometer (MPI)
+	where it's split and directed into two MPI arms with a half-transparent pellicle.
+	The CTR beams are then combined together at the exit of the MPI with the variable path difference.
+	The resulting CTR intensity is registered with a liquid helium cooled IR Labs
+	bolometer as a function of path difference.
+	The path difference is then converted into time as $\Delta \tau = 2 \Delta x$.
+	The resulting FWHM bunch duration is determined from the Gaussian fit of the interferogram.
+	To alleviate charge fluctuations, we recorded 15 bolometer values for each data point.
+	The data points outside of the 3$\sigma$ bracket were considered as outliers and discarded. 
+\end{minipage}\hspace{0.25em}
+\begin{minipage}{0.5\textwidth}
+	\centering
+	\vspace{-0.5em}
+	\includegraphics[width=1.0\linewidth]{images/THPMF048f1}
+	An example interferogram for Q=30 nC and laser pulse FWHM of 1.5 ps.
+\end{minipage}
+
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Neural Networks}{name=nn,column=0,below=problem, span=3}{%, bottomaligned=conclusion}{
+\headerbox{Beamline Layout}{name=beamline,column=0,below=problem, span=3}{%, bottomaligned=conclusion}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
-		{\bf hold} hold \\
-		%\includegraphics[width=0.7\textwidth]{NN_range1.png}\includegraphics[width=.3\textwidth]{NN_train.png}\\
 
-\begin{minipage}{0.47\textwidth}
-	 	%\includegraphics[width=.98\textwidth]{Network.png}\\
-		{\bf Procedure Used Here:}
-
-		\centering
-\end{minipage}
-\begin{minipage}{0.53\textwidth}
-	\centering
-	\vspace{0.2em}
-	%\vspace{0.8em}	
-	%\includegraphics[width=.49\textwidth]{NN_x_k_t_s_1.png}% 	
-	%\includegraphics[width=.49\textwidth]{NN_x_s_t_s_1.png} \\
-	%\includegraphics[width=.49\textwidth]{NN_ex_k_t_s_1.png}%  	
-	%\includegraphics[width=.49\textwidth]{NN_ex_s_t_s_1.png} \\
-	%\vspace{0.6em}
+\begin{center}
+	\begin{tikzpicture}[scale=0.8, text=black]
+	\input{THPMF048f2.tex}
+	\end{tikzpicture}	
 	
-\end{minipage}
+	\vspace{1em}
+	Beam line layout at the AWA.
+\end{center}
 
+%\includegraphics[width=0.7\textwidth]{NN_range1.png}\includegraphics[width=.3\textwidth]{NN_train.png}\\
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Acknowledgements}{name=doe,column=3,above=bottom, span=3}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{minipage}{0.5\textwidth}
-	We gratefully acknowledge the computing resources
-	provided on Bebop, an HPC cluster operated by the LCRC at ANL.
-	This work is partially supported by the U.S. DOE, Office of Science, under contract number DE-AC02-06CH11357 and grant number DE-SC0015479.\\
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{AWA Model Parameters $\vec{\lambda}$}{name=multiple,column=4,row=0,span=2}{
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\centering
-\vspace{-0.5em}
-\begin{minipage}{0.99\textwidth}
-	\centering
-	\begin{tabular}{ lcc}
-		Solenoid Strength & $ 200 \le \text{I}_{\text{bs}}\text{(A)} \le 500$  \Tstrut \\
-		Solenoid Strength & $ 170 \le \text{I}_{\text{s}}\text{(A)} \le 260$  \Tstrut \\
-		Phase of Gun & $-30^\circ \le \phi_{\text{gun}} \le 0^\circ$  \\
-		Quad 1  & $-8.8 \le \text{kQ}_{1}\text{(m}^{-1}) \le 8.8$  \\
-		Quad 2 & $-8.8 \le \text{kQ}_{2}\text{(m}^{-1}) \le 8.8$ 
-		%\bottomrule    
-	\end{tabular}
-\end{minipage}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Non-Intrusive Polynomial Chaos (PC)}{name=conditions,below=sims, above=bottom, column=3,row=0,span=3}{
+\headerbox{Simulations}{name=sims,below=sims, below=measure, column=3,row=0,span=3}{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
-\begin{minipage}{0.45\textwidth}
-{\bf hold:} hold
+Simulations of the AWA beam line 
+were performed with the code and OPAL.
+Input parameters for the simulations are shown in the table below.
+Note that on crest refers to the phase of max energy gain.
+In the case of the gun, a -~$5^{\circ}$ phase is measured 
+w.r.t the peak rf voltage.
 
-\end{minipage}
-\begin{minipage}{0.55\textwidth}
+\begin{center}
+	Simulation Parameters
+	\vspace{3.5em}
+	\begin{singlespace}
+		\begin{tabular}{lcc}
+			\hline%\toprule
+			\textbf{Parameter} & \textbf{Low Charge}  & \textbf{High Charge} \\
+			\hline%\midrule
+			Charge       & 0.3, 0.7, \SI{1.3}{nC}        & \SI{30}{nC}    \\ %[3pt]
+			Gun Gradient & \SI{65}{MV/m}     & \SI{65}{MV/m}  \\ %[3pt]
+			Gun Phase    & \SI{0}{}$^{\circ}$ & \SI{-5}{}$^{\circ}$ \\		 
+			$S_1$        & \SI{230}{A}		 & \SI{500}{A}	  \\
+			$S_2$		 & \SI{150}{A}   	 & \SI{235}{A}		 \\
+			Linac Phases & On crest          & On crest       \\
+			Laser FWHM   & \SI{1.5}{ps}      & \SI{1.5}{ps}   \\ %[3pt]
+			Laser Radius & \SI{2}{mm}        & \SI{9}{mm}     \\
+			\hline%\bottomrule
+		\end{tabular}
+	\end{singlespace}
+\end{center}
+
+Four scenarios were simulated, three low charge cases at 0.3, 0.7, and \SI{1}{nC}, and a 
+high charge case at \SI{30}{nC}. 
+These charges and input parameters were specifically chosen to 
+match experimental measurements that had taken place or would 
+take place in the future. Each simulation was run with 10,000 particles 
+on 8 cores, and ran 2.5 minutes to reach a z location of \SI{17}{m}.
+Prior work indicates the bunch length is not 
+very sensitive to the number of particles or grid size. 
+We expected charge, energy,
+and laser parameters to have the most impact on the simulation values.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Results}{name=results,column=3,below=sims, span=3}{%, bottomaligned=conclusion}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+While, we do not have an exact match, the results follow the same trends.
+The discrepancies indicate there are still adjustments that can be made
+to the simulation model. We will continue to try to improve agreement
+as more of these measurements are made.
+Note, the table gives bunch duration, and the plot gives bunch length for the same data.
+	
+	\begin{center}
+		Experimental Measurements
+		\vspace{3em}
+		\begin{singlespace}
+			\begin{tabular}{rcc}
+				\hline%\toprule
+				\textbf{Charge} & \textbf{Bunch Dur. (RMS)} & \textbf{Laser spot size}  \\
+				\hline%\midrule
+				\SI{0.3}{nC} & \SI{2.2}{ps} & 4 mm    \\ %[3pt]
+				\SI{0.7}{nC} & \SI{2.6}{ps} & 4 mm   \\ %[3pt]
+				\SI{1.3}{nC} & \SI{2.6}{ps} & 4 mm    \\
+				\SI{30}{nC}  & \SI{4.1}{ps} & 9 mm \\ %[3pt]
+				\hline%\bottomrule
+			\end{tabular}
+		\end{singlespace}
+	\end{center}
+	
 
 
-\centering
+\begin{center}
+	\includegraphics[width=1\linewidth]{images/THPMF048f5}
+	
+Comparison of simulations and experimental measurements.
+\end{center}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Experimental Setup}{name=exp,column=0,below=beamline, span=3}{%, bottomaligned=conclusion}{
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+\vspace{-1em}
+\begin{center}
+\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
+\node (fig1) at (0,0)
+{\includegraphics[width=0.8\textwidth]{images/THPMF048f3}};
+\node[fill=white, inner sep=2pt] (txt2) at (35,15) {Interferometer};
+\node[fill=white, inner sep=2pt, rotate=26] (txt2) at (18,19.5) {Slit};	
+\node[fill=white, inner sep=2pt, rotate=20] (txt2) at (13,27) {Window};
+
+\node (fig2) at (0,-55)
+{\includegraphics[width=0.8\textwidth]{images/THPMF048f4}};
+\node[fill=white, inner sep=2pt] (txt2) at (35,-42) {Interferometer};	
+\node[fill=white, inner sep=2pt] (txt2) at (55,-25) {Window};	
+\node[fill=white, inner sep=2pt] (txt2) at (22,-15) {Bolometer};
+\end{tikzpicture}
+ 
+\end{center}
+
+
+IR labs bolometer and MPI interferometer used in the experiment
+to capture CTR light as it exited a window on the beam line.
 \vspace{1em}
-\textbf{hold}
-%\includegraphics[width=0.7\textwidth]{awa-medium-o4/sensresults}
 
-\end{minipage}
-\begin{minipage}{1.0\textwidth}
-	\centering
-	\vspace{-1.5em}
-	\textbf{hold}\\
-	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-emit_x}%
-	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-emit_z}% 	
-	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-energy.pdf}%
-	%\includegraphics[width=.25\textwidth]{awa-medium-o4/suroresults-i-dE.pdf}%
-\end{minipage}	 
+Bunches were allowed to propagate freely to the 
+CTR screen. The only focusing elements used were solenoids $S_1$ and
+$S_2$. As the bunches passed the CTR screen, light was
+emitted through a window located next to the screen. 
+A slit was used to prevent
+background x-rays from reaching the bolometer.
+After passing the slit, the CTR propagated to the 
+interferometer. 
+A remotely movable stage inside the interferometer was swept, 
+and the resulting combined signal fed to the bolometer. 
+Periodic refilling of the helium was required throughout the day in order
+to keep the bolometer at \SI{4}{K}. 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\headerbox{Conclusion}{name=con,column=3,above=bottom, below=results, aligned=ref, span=3}{%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We performed experimental measurements of the electron bunch 
+length using CTR and scanning interferometer technique.
+The data was analyzed and compared to OPAL simulations.
+The bunch length for the cases of 1 and \SI{30}{nC} is reported.
+We note a decent agreement between the simulations and 
+experimental results. The experimental setup will be used in the future
+AWA CTR studies. 
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\headerbox{Acknowlegements and References}{name=ref,column=0,above=bottom, span=3}{%
+\headerbox{Acknowlegements}{name=ref,column=0,above=bottom, below=exp, span=3}{%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\noindent
-%\centering
-%\vspace{-1.2em}
-\begin{minipage}{0.6\textwidth} %multicols}{2}
-	\noindent 
-	We gratefully acknowledge the computing resources
-	provided on Bebop and Merlin, HPC clusters operated by the LCRC at ANL and PSI respectively.
-	This work is partially supported by the U.S. DOE, Office of Science, under
-	contract DE-AC02-06CH11357 and grant number DE-SC0015479.
-\end{minipage}
-\begin{minipage}{0.4\textwidth}
-	\tiny
-	\begin{enumerate}
-		\item \url{https://gitlab.psi.ch/OPAL/src/wikis/home}
-		\item \url{arXiv:1509.08130v6 [physics.acc-ph]}
-		\item \url{arXiv:1610.06151 [physics.acc-ph]}
-		\item \url{arXiv:1612.05662 [physics.acc-ph]}
-		\item  {A.L. Edelen, et al., FEL'17, paper WEP031} %http://permalink.lanl.gov/object/tr?what=info:lanl-repo/lareport/LA-UR-17-28069
-	\end{enumerate}
-\end{minipage}
-
-%\end{multicols}
+\noindent 
+We gratefully acknowledge the computing resources
+provided on Bebop, a HPC cluster operated by the LCRC at ANL.
+This work is supported by the U.S. DOE, OS,  
+contract DE-AC02-06CH11357 and grant DE-SC0015479. 
+Travel to IPAC'18 supported by the United States National Science Foundation, 
+the Division of Physics of Beams of the American Physical Society, and TRIUMF.
+\vspace{-1em}
+\hfill
+\begin{center}
+	\includegraphics[width=0.125\textwidth]{logos/nsf}\hspace{1em}
+	\includegraphics[width=0.4\textwidth]{logos/DOE_logo_color_cmyk}\hspace{1em}
+	\includegraphics[width=0.125\textwidth]{logos/aps-logo}
+\end{center}
 }
+
+
 
 
 \end{poster}%
