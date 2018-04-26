@@ -138,11 +138,62 @@ the interferogram; see Fig. \ref{interferogram}.
 To alleviate the effect of charge fluctuations, we recorded 15 bolometer values for each data point.
 The values were then averaged and the errorbars were deduced from the data. The data points
 outside of the 3$\sigma$ bracket were considered as outliers and discarded. The resulting
-interference pattern as a function of time delay in the MPI is similar to that presented in Fig. \ref{interferogram}.
+interference pattern as a function of time delay in the MPI is similar to that presented in Fig.~\ref{interferogram}.
+
+\begin{figure*}[hbt]
+	\centering
+	\begin{tikzpicture}[scale=0.8, text=black]
+	\input{tikz-linac.tex}
+	\end{tikzpicture}	
+	\caption{Beam line layout at the AWA.}
+	\label{beamline}
+\end{figure*}
+\section{Experimental Setup}
+The beam line layout is shown in Fig.~\ref{beamline}. 
+Bunches were allowed to propagate freely to the 
+CTR screen. The only focusing elements used were solenoids $S_1$ and
+$S_2$. As the bunches passed the CTR screen, light was
+emitted through a window located next to the screen, 
+as shown in Fig.~\ref{bolo}. A slit was used to prevent
+background x-rays from reaching the bolometer.
+After passing the slit, the CTR propagated to the 
+ interferometer also shown in Fig.~\ref{bolo}. 
+A remotely movable stage inside the interferometer was swept, 
+and the resulting combined signal fed to the bolometer. 
+%The bolometer was cooled with liquid helium. 
+Periodic refilling of the helium was required throughout the day in order
+to keep the bolometer at \SI{4}{K}. The bolometer sensitivity knob was at position ``1'' and
+the gain set to 200.
+For the case of 1 nC electrons beams, the laser transverse profile was homogenized prior to the vacuum injection \cite{PhysRevAccelBeams.20.103404}.
+To produce high-charge 40 nC beams, we implemented an additional laser beamline that bypasses the homogenizer due to the losses in the 
+MLA and relay optics.
+
+
+
+\begin{figure}
+	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
+	\node (fig1) at (0,0)
+	{\includegraphics[width=0.5\textwidth]{images/interferometer}};
+	\node[fill=white, inner sep=2pt] (txt2) at (35,15) {Interferometer};
+	\node[fill=white, inner sep=2pt, rotate=26] (txt2) at (18,19.5) {Slit};	
+	\node[fill=white, inner sep=2pt, rotate=20] (txt2) at (13,27) {Window};
+
+	\node (fig2) at (0,-50)
+	{\includegraphics[width=0.5\textwidth]{images/bolometer}};
+	\node[fill=white, inner sep=2pt] (txt2) at (35,-42) {Interferometer};	
+	\node[fill=white, inner sep=2pt] (txt2) at (55,-25) {Window};	
+	\node[fill=white, inner sep=2pt] (txt2) at (22,-15) {Bolometer};
+	\end{tikzpicture}
+	\caption{IR labs bolometer and MPI interferometer used in the experiment
+		 to capture CTR light as it exited a window on the beam line. }
+	%\label{inter}
+	%\caption{Bolometer. }
+	\label{bolo}
+\end{figure}
 
 
 \section{Simulations}
-Simulations of the AWA beam line shown in Fig~\ref{beamline}
+Simulations of the AWA beam line shown in Fig.~\ref{beamline}
 were performed with the code and OPAL~\cite{opal}.
 The gun, accelerating cavities, and solenoids were modeled with 2D
 Poisson/Superfish~\cite{fish} files. All field maps were in the T7 format.
@@ -150,18 +201,6 @@ Input parameters for the simulations are shown in Table~\ref{simparam}.
 Note that on crest refers to the phase of max energy gain.
 In the case of the gun, a -~$20^{\circ}$ phase is measured 
 w.r.t the peak rf voltage.
-\begin{figure*}[!tbh]
-	\centering
-	\begin{tikzpicture}[scale=1.0, text=black]
-	\input{tikz-linac.tex}
-	\end{tikzpicture}	
-	\caption{Beam line layout at the AWA.}
-	\label{beamline}
-\end{figure*}
-
-Four scenarios were simulated, a three low charge cases at 0.3, 0.7, and \SI{1}{nC}, and a 
-high charge case at \SI{40}{nC}. 
-
 \begin{table}[hbt]
 	%   \vspace*{-.5\baselineskip}
 	\centering
@@ -184,51 +223,32 @@ high charge case at \SI{40}{nC}.
 	%   \vspace*{-\baselineskip}
 \end{table}
 
+Four scenarios were simulated, three low charge cases at 0.3, 0.7, and \SI{1}{nC}, and a 
+high charge case at \SI{40}{nC}. 
+These charges and input parameters were specifically chosen to 
+match experimental measurements that had taken place or would 
+take place in the future. Each simulation was run with 10,000 particles 
+on 8 cores. Prior work \cite{benchmark} has indicated the the bunch length is not 
+very sensitive to the number of particles or grid size. 
+This would not be the case if we were comparing emittance, or 
+transverse characteristics. 
 
-
-\section{Experimental Setup}
-The beam line layout is shown in Fig.~\ref{beamline}. 
-Bunches were allowed to propagate freely to the 
-CTR screen. The only focusing elements used were solenoids $S_1$ and
-$S_2$. As the bunches passed the CTR screen, light was
-emitted through a window located next to the screen, 
-as shown in Fig.~\ref{bolo}. A slit was used to prevent
-background x-rays from reaching the bolometer.
-After passing the slit, the CTR propagated to the 
- interferometer also shown in Fig~\ref{bolo}. 
-A remotely movable stage inside the interferometer was swept, 
-and the resulting combined signal fed to the bolometer. 
-%The bolometer was cooled with liquid helium. 
-Periodic refilling of the helium was required throughout the day in order
-to keep the bolometer at \SI{4}{K}. The bolometer sensitivity knob was at position ``1'' and
-the gain set to 200.
-For the case of 1 nC electrons beams, the laser transverse profile was homogenized prior to the vacuum injection \cite{PhysRevAccelBeams.20.103404}.
-To produce high-charge 40 nC beams, we implemented an additional laser beamline that bypasses the homogenizer due to the losses in the 
-MLA and relay optics.
- 
-\begin{figure}
-	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
-	\node (fig1) at (0,0)
-	{\includegraphics[width=0.5\textwidth]{images/interferometer}};
-	\node[fill=white, inner sep=2pt] (txt2) at (35,15) {Interferometer};
-	\node[fill=white, inner sep=2pt, rotate=26] (txt2) at (18,19.5) {Slit};	
-	\node[fill=white, inner sep=2pt, rotate=20] (txt2) at (13,27) {Window};
-
-	\node (fig2) at (0,-50)
-	{\includegraphics[width=0.5\textwidth]{images/bolometer}};
-	\node[fill=white, inner sep=2pt] (txt2) at (35,-42) {Interferometer};	
-	\node[fill=white, inner sep=2pt] (txt2) at (55,-25) {Window};	
-	\node[fill=white, inner sep=2pt] (txt2) at (22,-15) {Bolometer};
-	\end{tikzpicture}
-	\caption{IR labs bolometer and MPI interferometer used in the experiment
-		 to capture CTR light as it exited a window on the beam line. }
-	%\label{inter}
-	%\caption{Bolometer. }
-	\label{bolo}
-\end{figure}
 
 \section{Results}
-Compare simulations to experimental measurements
+Comparison of simulation and experimental results are shown in Fig.~\ref{sims}.
+\begin{figure*}[!tbh]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/bunchlength}
+	\caption{Comparison of simulation and experimental measurements.}
+	\label{sims}
+\end{figure*}
+While, we do not have an exact match, the results agree within reason.
+The discrepancies indicate there are still adjustments that can be made
+to the simulation model. We will continue to try to improve agreement
+as more of these measurements are made.
+
+Experimentally measured values of the bunch duration are shown in Table~\ref{exp}.
+We hope these can serve as future reference for others doing experiments at the AWA.
 \begin{table}[hbt]
 	\centering
 	\caption{Experimental Measurements}
@@ -245,12 +265,6 @@ Compare simulations to experimental measurements
 	\label{exp}
 \end{table}
 
-\begin{figure*}[!tbh]
-	\centering
-	\includegraphics[width=0.8\linewidth]{images/bunchlength}
-	\caption{Comparison of simulation and experimental measurements.}
-	\label{sims}
-\end{figure*}
 
 \section{Conclusion}
 We performed experimental measurements of the electron bunch 
@@ -288,10 +302,11 @@ Busan, South Korea, May 2016,
 paper TUOBB01.
 
 \bibitem{pets}
-J.~Shao \emph{et al.}, “PETS....”
+J.~Shao \emph{et al.}, 
+“Recent Progress towards Dielectric Short Pulse Two-Beam Acceleration”
 in \textit{Proc. IPAC’18}, 
 Vancouver, Canada, May 2018, 
-paper xxx.
+paper TUYGBE3.
 
 \bibitem{therm}
 L.~Zheng \emph{et al.}, “Measurements of Thermal Emittance 
@@ -337,6 +352,14 @@ Rep. PSI-PR-08-02, 2008-2017.
 	Codes},  Los Alamos Accelerator Code Group,  
 Los Alamos, NM, USA, 
 Rep. LA-UR-87-126, Jan. 1987.
+
+\bibitem{benchmark}
+N.~Neveu \emph{et al.}, “Demonstration of Current Profile 
+Shaping using Double Dog-Leg Emittance Exchange Beam 
+Line at Argonne Wakefield Accelerator”
+in \textit{Proc. IPAC’16}, 
+Busan, South Korea, May 2016, 
+paper TUOBB01.
 
 \bibitem{PhysRevAccelBeams.20.103404}
 A.~Halavanau \textit{et al.},
