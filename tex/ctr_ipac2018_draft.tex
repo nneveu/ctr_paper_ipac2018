@@ -132,7 +132,7 @@ The resulting FWHM bunch duration is determined from the Gaussian fit of
 the interferogram; see Fig. \ref{interferogram}.
 \begin{figure}
  \includegraphics[width=1.0\linewidth]{images/measurement}
- \caption{An example interferogram for Q=40 nC and laser pulse FWHM of 1.5 ps.}
+ \caption{An example interferogram for Q=30 nC and laser pulse FWHM of 1.5 ps.}
  \label{interferogram}
 \end{figure}
 To alleviate the effect of charge fluctuations, we recorded 15 bolometer values for each data point.
@@ -199,7 +199,7 @@ The gun, accelerating cavities, and solenoids were modeled with 2D
 Poisson/Superfish~\cite{fish} files. All field maps were in the T7 format.
 Input parameters for the simulations are shown in Table~\ref{simparam}.
 Note that on crest refers to the phase of max energy gain.
-In the case of the gun, a -~$20^{\circ}$ phase is measured 
+In the case of the gun, a -~$5^{\circ}$ phase is measured 
 w.r.t the peak rf voltage.
 \begin{table}[hbt]
 	%   \vspace*{-.5\baselineskip}
@@ -211,9 +211,9 @@ w.r.t the peak rf voltage.
 		\midrule
 		Charge       & 0.3, 0.7, \SI{1.3}{nC}        & \SI{40}{nC}    \\ %[3pt]
 		Gun Gradient & \SI{65}{MV/m}     & \SI{65}{MV/m}  \\ %[3pt]
-		Gun Phase    & \SI{0}{}$^{\circ}$ & \SI{-20}{}$^{\circ}$ \\		 
+		Gun Phase    & \SI{0}{}$^{\circ}$ & \SI{-5}{}$^{\circ}$ \\		 
 		$S_1$        & \SI{230}{A}		 & \SI{500}{A}	  \\
-		$S_2$		 & \SI{150}{A}   	 & \SI{185}{A}		 \\
+		$S_2$		 & \SI{150}{A}   	 & \SI{235}{A}		 \\
 		Linac Phases & On crest          & On crest       \\
 		Laser FWHM   & \SI{1.5}{ps}      & \SI{1.5}{ps}   \\ %[3pt]
 		Laser Radius & \SI{2}{mm}        & \SI{9}{mm}     \\
@@ -224,14 +224,16 @@ w.r.t the peak rf voltage.
 \end{table}
 
 Four scenarios were simulated, three low charge cases at 0.3, 0.7, and \SI{1}{nC}, and a 
-high charge case at \SI{40}{nC}. 
+high charge case at \SI{30}{nC}. 
 These charges and input parameters were specifically chosen to 
 match experimental measurements that had taken place or would 
 take place in the future. Each simulation was run with 10,000 particles 
-on 8 cores. Prior work \cite{benchmark} has indicated the the bunch length is not 
+on 8 cores, and ran 2.5 minutes to reach a z location of \SI{17}{m}.
+Prior work \cite{benchmark} indicates the bunch length is not 
 very sensitive to the number of particles or grid size. 
 This would not be the case if we were comparing emittance, or 
-transverse characteristics. 
+transverse characteristics. We expected charge, energy,
+and laser parameters to have the most impact on the simulation values.
 
 
 \section{Results}
@@ -239,17 +241,23 @@ Comparison of simulation and experimental results are shown in Fig.~\ref{sims}.
 \begin{figure*}[!tbh]
 	\centering
 	\includegraphics[width=0.8\linewidth]{images/bunchlength}
-	\caption{Comparison of simulation and experimental measurements.}
+	\caption{Comparison of simulations and experimental measurements.}
 	\label{sims}
 \end{figure*}
 While, we do not have an exact match, the results agree within reason.
 The discrepancies indicate there are still adjustments that can be made
 to the simulation model. We will continue to try to improve agreement
-as more of these measurements are made.
+as more of these measurements are made. 
+This can include better measurements of the beam energy, and careful attention to other 
+beam line parameters such as the laser radius and solenoid strengths.
+In the case of high charge simulations, where the agreement is the worst, 
+more consideration is needed for large charge fluctuations in the data.
 
 Experimentally measured values of the bunch duration are shown in Table~\ref{exp}.
+Note the units in the table are picoseconds and the units in Fig.~\ref{sims} are millimeters.
+The table gives bunch duration, and the plot gives bunch length for the same data.
 We hope these can serve as future reference for others doing experiments at the AWA.
-\begin{table}[hbt]
+\begin{table}[h]
 	\centering
 	\caption{Experimental Measurements}
 	\begin{tabular}{rcc}
@@ -259,7 +267,7 @@ We hope these can serve as future reference for others doing experiments at the 
 		\SI{0.3}{nC} & \SI{2.2}{ps} & 4 mm    \\ %[3pt]
 		\SI{0.7}{nC} & \SI{2.6}{ps} & 4 mm   \\ %[3pt]
 		\SI{1.3}{nC} & \SI{2.6}{ps} & 4 mm    \\
-		\SI{40}{nC}  & \SI{4.1}{ps} & 9 mm \\ %[3pt]
+		\SI{30}{nC}  & \SI{4.1}{ps} & 9 mm \\ %[3pt]
 		\bottomrule
 	\end{tabular}
 	\label{exp}
@@ -270,7 +278,7 @@ We hope these can serve as future reference for others doing experiments at the 
 We performed experimental measurements of the electron bunch 
 length using CTR and scanning interferometer technique.
 The data was analyzed and compared to OPAL simulations.
-The bunch length for the cases of 1 and \SI{40}{nC} is reported.
+The bunch length for the cases of 1 and \SI{30}{nC} is reported.
 We note a decent agreement between the simulations and 
 experimental results. The experimental setup will be used in the future
 AWA CTR studies. 
@@ -322,6 +330,11 @@ in \textit{Proc. IPAC’17},
 Copenhagen, Denmark, May 2017, 
 paper WEPVA022.
 
+\bibitem{PhysRevAccelBeams.20.103404}
+A.~Halavanau \textit{et al.},
+%"Spatial Control of Photoemitted Electron Beams using a Micro-Lens-Array Transverse-Shaping Technique",
+\emph{Phys. Rev. Accel. Beams}, 20:103404, 2017.
+
 \bibitem{Happek}
 U.~Happek, A.~J. Sievers, and E.~B. Blum,
 %\newblock "Observation of coherent transition radiation",
@@ -354,17 +367,14 @@ Los Alamos, NM, USA,
 Rep. LA-UR-87-126, Jan. 1987.
 
 \bibitem{benchmark}
-N.~Neveu \emph{et al.}, “Demonstration of Current Profile 
-Shaping using Double Dog-Leg Emittance Exchange Beam 
-Line at Argonne Wakefield Accelerator”
-in \textit{Proc. IPAC’16}, 
-Busan, South Korea, May 2016, 
-paper TUOBB01.
+N.~Neveu \emph{et al.}, 
+“Benchmark of RF Photoinjector and Dipole
+Using ASTRA, GPT, and OPAL”
+in \textit{Proc. NAPAC’16}, 
+Chicago, IL, USA, Oct. 2016, 
+paper THPOA46.
 
-\bibitem{PhysRevAccelBeams.20.103404}
-A.~Halavanau \textit{et al.},
-%"Spatial Control of Photoemitted Electron Beams using a Micro-Lens-Array Transverse-Shaping Technique",
-\emph{Phys. Rev. Accel. Beams}, 20:103404, 2017.
+
 
 
 \end{thebibliography}
