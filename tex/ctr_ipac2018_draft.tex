@@ -101,9 +101,9 @@ This beam line is capable of low (\SI{0.1}{nC}) and
 high charge (\SI{100}{nC}) operation.
 Both beamlines utilize the 248 nm UV laser 
 to generate photoelectrons with the Full Width Half Maximum
-(FWHM) duration ranging from 1.5 ps to 10 ps.
+(FWHM) pulse duration ranging from 1.5 ps to 10 ps.
 The bunch charge is 
-routinely adjusted for depending on the requirements 
+routinely adjusted depending on the requirements 
 of the experiments downstream of the photoinjector.
 Typical operating charges are 1, 4, 10, and \SI{40}{nC}. 
 While these are the most
@@ -112,45 +112,44 @@ and provided depending on the experiment.
 Recent experiments include emittance exchange \cite{eex}, 
 structure tests \cite{pets}, thermal emittance measurements \cite{therm}, 
 and two beam acceleration \cite{tba}. 
-Recently, AWA laser system was upgraded with the microlens array (MLA) setup
-that yields very transversely homogeneous bunches.
+Recently, AWA laser system was upgraded with a microlens array (MLA) setup
+that yields very transversely homogeneous bunches \cite{PhysRevAccelBeams.20.103404}.
 The effect of the MLA generated beam on the final electron 
-bunch length is not yet investigated, therefore motivating
-this work.
+bunch length had not been investigated, motivating this work.
 
 
 
 \section{Measurement Technique}
 In order to measure the bunch length, we performed an autocorrelation scan
 of the CTR produced by the electron distribution \cite{Happek, WBarry}.
-In brief, the CTR is transported into Martin-Puplett interferometer (MPI)
+In brief, the CTR is transported into a Martin-Puplett interferometer (MPI)
 where it's split and directed into two MPI arms with a half-transparent pellicle \cite{PhysRevSTAB.9.082801}. 
 The CTR beams are then combined together at the exit of the MPI with the variable path difference.
 The resulting CTR intensity is registered with a liquid helium cooled IR Labs
-bolometer \cite{IRlabs} as function of path difference.
+bolometer \cite{IRlabs} as a function of path difference.
 The path difference is then converted into time as $\Delta \tau = 2 \Delta x$.
 The resulting FWHM bunch duration is determined from the Gaussian fit of 
 the interferogram; see Fig. \ref{interferogram}.
 \begin{figure}
  \includegraphics[width=1.0\linewidth]{images/measurement}
- \caption{An example interferogram for Q=1 nC and laser pulse FWHM of 3 ps.}
+ \caption{An example interferogram for Q=40 nC and laser pulse FWHM of 1.5 ps.}
  \label{interferogram}
 \end{figure}
-To alleviate charge fluctuations, we recorded 15 bolometer values for each data point.
+To alleviate the effect of charge fluctuations, we recorded 15 bolometer values for each data point.
 The values were then averaged and the errorbars were deduced from the data. The data points
 outside of the 3$\sigma$ bracket were considered as outliers and discarded. The resulting
-interference pattern as a function of time delay in the MPI is similar to presented in Fig. \ref{interferogram}.
+interference pattern as a function of time delay in the MPI is similar to that presented in Fig. \ref{interferogram}.
+
 
 \section{Simulations}
 Simulations of the AWA beam line shown in Fig~\ref{beamline}
-were performed in the Particle In Cell code and OPAL~\cite{opal}.
+were performed with the code and OPAL~\cite{opal}.
 The gun, accelerating cavities, and solenoids were modeled with 2D
 Poisson/Superfish~\cite{fish} files. All field maps were in the T7 format.
 Input parameters for the simulations are shown in Table~\ref{simparam}.
 Note that on crest refers to the phase of max energy gain.
 In the case of the gun, a -~$20^{\circ}$ phase is measured 
-w.r.t the phase of max energy gain. 
-In other words, we ran $-20^{\circ}$ off crest.
+w.r.t the peak rf voltage.
 \begin{figure*}[!tbh]
 	\centering
 	\begin{tikzpicture}[scale=1.0, text=black]
@@ -160,7 +159,7 @@ In other words, we ran $-20^{\circ}$ off crest.
 	\label{beamline}
 \end{figure*}
 
-Two scenario were simulated, a low charge case at \SI{1}{nC}, and a 
+Four scenarios were simulated, a three low charge cases at 0.3, 0.7, and \SI{1}{nC}, and a 
 high charge case at \SI{40}{nC}. 
 
 \begin{table}[hbt]
@@ -171,11 +170,11 @@ high charge case at \SI{40}{nC}.
 		\toprule
 		\textbf{Parameter} & \textbf{Low Charge}  & \textbf{High Charge} \\
 		\midrule
-		Charge       & \SI{1}{nC}        & \SI{40}{nC}    \\ %[3pt]
+		Charge       & 0.3, 0.7, \SI{1.3}{nC}        & \SI{40}{nC}    \\ %[3pt]
 		Gun Gradient & \SI{65}{MV/m}     & \SI{65}{MV/m}  \\ %[3pt]
-		Gun Phase    & \SI{-20}{}$^{\circ}$ & \SI{-20}{}$^{\circ}$ \\		 
-		$S_1$        & \SI{500}{A}		 & \SI{500}{A}	  \\
-		$S_2$		 & \SI{}{A}   	 & \SI{185}{A}		 \\
+		Gun Phase    & \SI{0}{}$^{\circ}$ & \SI{-20}{}$^{\circ}$ \\		 
+		$S_1$        & \SI{230}{A}		 & \SI{500}{A}	  \\
+		$S_2$		 & \SI{150}{A}   	 & \SI{185}{A}		 \\
 		Linac Phases & On crest          & On crest       \\
 		Laser FWHM   & \SI{1.5}{ps}      & \SI{1.5}{ps}   \\ %[3pt]
 		Laser Radius & \SI{2}{mm}        & \SI{9}{mm}     \\
@@ -185,7 +184,6 @@ high charge case at \SI{40}{nC}.
 	%   \vspace*{-\baselineskip}
 \end{table}
 
-Simulations...
 
 
 \section{Experimental Setup}
@@ -196,14 +194,17 @@ $S_2$. As the bunches passed the CTR screen, light was
 emitted through a window located next to the screen, 
 as shown in Fig.~\ref{bolo}. A slit was used to prevent
 background x-rays from reaching the bolometer.
-After passing the slit, the light was captured 
-using an interferometer outside the beam line, 
-also shown in Fig~\ref{bolo}. 
-A remotely movable leg inside the interferometer was swept, 
-and the resulting signal fed to the bolometer. 
-The bolometer was cooled with liquid helium. 
+After passing the slit, the CTR propagated to the 
+ interferometer also shown in Fig~\ref{bolo}. 
+A remotely movable stage inside the interferometer was swept, 
+and the resulting combined signal fed to the bolometer. 
+%The bolometer was cooled with liquid helium. 
 Periodic refilling of the helium was required throughout the day in order
-to keep the bolometer at \SI{4}{K}.
+to keep the bolometer at \SI{4}{K}. The bolometer sensitivity knob was at position ``1'' and
+the gain set to 200.
+For the case of 1 nC electrons beams, the laser transverse profile was homogenized prior to the vacuum injection \cite{PhysRevAccelBeams.20.103404}.
+To produce high-charge 40 nC beams, we implemented an additional laser beamline that bypasses the homogenizer due to the losses in the 
+MLA and relay optics.
  
 \begin{figure}
 	\begin{tikzpicture}[every node/.style={anchor=south west,inner sep=0pt},x=1mm, y=1mm,]   
@@ -231,40 +232,42 @@ Compare simulations to experimental measurements
 \begin{table}[hbt]
 	\centering
 	\caption{Experimental Measurements}
-	\begin{tabular}{rc}
+	\begin{tabular}{rcc}
 		\toprule
-		\textbf{Charge} & \textbf{Bunch Length RMS}   \\
+		\textbf{Charge} & \textbf{Bunch Dur. (RMS)} & \textbf{Laser spot size}  \\
 		\midrule
-		\SI{0.3}{nC} & \SI{2.2}{ps}     \\ %[3pt]
-		\SI{0.7}{nC} & \SI{2.6}{ps}     \\ %[3pt]
-		\SI{1.3}{nC} & \SI{2.6}{ps}      \\
-		\SI{40}{nC}  & \SI{6}{ps}   \\ %[3pt]
+		\SI{0.3}{nC} & \SI{2.2}{ps} & 4 mm    \\ %[3pt]
+		\SI{0.7}{nC} & \SI{2.6}{ps} & 4 mm   \\ %[3pt]
+		\SI{1.3}{nC} & \SI{2.6}{ps} & 4 mm    \\
+		\SI{40}{nC}  & \SI{4.1}{ps} & 9 mm \\ %[3pt]
 		\bottomrule
 	\end{tabular}
 	\label{exp}
 \end{table}
 
-\begin{figure}
-	\includegraphics[width=1.0\linewidth]{images/bunchlength}
+\begin{figure*}[!tbh]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/bunchlength}
 	\caption{Comparison of simulation and experimental measurements.}
 	\label{sims}
-\end{figure}
+\end{figure*}
 
 \section{Conclusion}
-Simulations of an AWA photoinjector were done in OPAL.
-Experimental measurements of the bunch length were done using CTR.
-The data was analyzed and compared to simulation results.
-The bunch length for 1 and \SI{40}{nC} is reported.
-There is good agreement between the simulations and 
-experimental measurements. This method can now be used
-in future experiments at the AWA to measure bunch length.
+We performed experimental measurements of the electron bunch 
+length using CTR and scanning interferometer technique.
+The data was analyzed and compared to OPAL simulations.
+The bunch length for the cases of 1 and \SI{40}{nC} is reported.
+We note a decent agreement between the simulations and 
+experimental results. The experimental setup will be used in the future
+AWA CTR studies. 
 
 
 
 \section{acknowledgments}
 We would like to thank 
 Northern Illinois University (NIU) for providing the 
-interferometer used in this experiment. 
+interferometer used in this experiment. The work of A.H. 
+is supported by the US Department of Energy under contract No. DE-SC0011831 with Northern Illinois University.
 We also gratefully acknowledge the computing resources
 provided on Bebop, a high-performance computing cluster
 operated by the LCRC at Argonne National Laboratory.
@@ -351,4 +354,3 @@ A.~Halavanau \textit{et al.},
 
 
 \end{document}
-	
