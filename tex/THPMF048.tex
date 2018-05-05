@@ -85,7 +85,7 @@ The AWA accelerator has a large dynamic charge density range,
 with electron beam charge varying between 0.1 nC - 100 nC, 
 and laser spot size diameter at the cathode between 0.1 mm - 18 mm. 
 The bunch length measurements were taken at different charge densities 
-using a metallic screen and a Martin-Puplett interferometer to perform 
+using a metallic screen and a Michelson interferometer to perform 
 autocorrelation scans of the corresponding coherent transition radiation (CTR). 
 A liquid helium-cooled 4K bolometer was used to register the interferometer signal. 
 The experimental results are compared with OPAL-T numerical simulations.
@@ -122,9 +122,9 @@ bunch length had not been investigated, motivating this work.
 \section{Measurement Technique}
 In order to measure the bunch length, we performed an autocorrelation scan
 of the CTR produced by the electron distribution \cite{Happek, WBarry}.
-In brief, the CTR is transported into a Martin-Puplett interferometer (MPI)
-where it's split and directed into two MPI arms with a half-transparent pellicle \cite{PhysRevSTAB.9.082801}. 
-The CTR beams are then combined together at the exit of the MPI with the variable path difference.
+In brief, the CTR is transported into a Michelson interferometer (MI)
+where it's split and directed into two MI arms with a half-transparent pellicle \cite{PhysRevSTAB.9.082801}. 
+The CTR beams are then combined together at the exit of the MI with the variable path difference.
 The resulting CTR intensity is registered with a liquid helium cooled IR Labs
 bolometer \cite{IRlabs} as a function of path difference.
 The path difference is then converted into time as $\Delta \tau = 2 \Delta x$.
@@ -138,7 +138,7 @@ the interferogram; see Fig. \ref{interferogram}.
 To alleviate the effect of charge fluctuations, we recorded 15 bolometer values for each data point.
 The values were then averaged and the errorbars were deduced from the data. The data points
 outside of the 3$\sigma$ bracket were considered as outliers and discarded. The resulting
-interference pattern as a function of time delay in the MPI is similar to that presented in Fig.~\ref{interferogram}.
+interference pattern as a function of time delay in the MI is similar to that presented in Fig.~\ref{interferogram}.
 
 \begin{figure*}[hbt]
 	\centering
@@ -165,7 +165,7 @@ Periodic refilling of the helium was required throughout the day in order
 to keep the bolometer at \SI{4}{K}. The bolometer sensitivity knob was at position ``1'' and
 the gain set to 200.
 For the case of 1 nC electrons beams, the laser transverse profile was homogenized prior to the vacuum injection \cite{PhysRevAccelBeams.20.103404}.
-To produce high-charge 40 nC beams, we implemented an additional laser beamline that bypasses the homogenizer due to the losses in the 
+To produce high-charge 30 nC beams, we implemented an additional laser beamline that bypasses the homogenizer due to the losses in the 
 MLA and relay optics.
 
 
@@ -184,7 +184,7 @@ MLA and relay optics.
 	\node[fill=white, inner sep=2pt] (txt2) at (55,-25) {Window};	
 	\node[fill=white, inner sep=2pt] (txt2) at (22,-15) {Bolometer};
 	\end{tikzpicture}
-	\caption{IR labs bolometer and MPI interferometer used in the experiment
+	\caption{IR labs bolometer and MI interferometer used in the experiment
 		 to capture CTR light as it exited a window on the beam line. }
 	%\label{inter}
 	%\caption{Bolometer. }
